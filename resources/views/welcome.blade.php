@@ -1052,57 +1052,51 @@
 <section class="py-24 border-b border-[#EAEAEA]">
     <div class="max-w-[1200px] mx-auto px-6">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Featured Writing</p>
-        <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-8">From the blog</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#EAEAEA] border-t border-b border-[#EAEAEA]">
-            <a href="#" class="group bg-white block no-underline hover:bg-[#FAFAFA] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] border-b border-[#EAEAEA] flex items-center justify-center overflow-hidden relative">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Image</span>
-                    <div class="absolute inset-0 bg-[#16A34A]/0 group-hover:bg-[#16A34A]/5 transition-colors duration-300"></div>
+        <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">From the blog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="{{ url('/blog') }}" class="group block">
+                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
+                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                 </div>
-                <div class="p-8">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#8E8E93] mb-4">June 2026</p>
-                    <h3 class="text-lg font-semibold tracking-[-0.01em] text-black mb-3 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">
-                        Designing Systems That Scale Without Losing Soul
-                    </h3>
-                    <p class="text-sm font-normal leading-[1.6] text-gray-500 mb-4">How to build component libraries that remain expressive as teams and products grow.</p>
-                    <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                        Read article
-                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Design</p>
+                    <span class="text-[#EAEAEA]">·</span>
+                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">8 min read</p>
+                </div>
+                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">Designing Systems That Scale Without Losing Soul</h3>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Most design systems start with the best intentions and end in rigid sprawl. Here's how to build components that give teams speed without sacrificing craft.</p>
+                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
+                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                 </div>
             </a>
-            <a href="#" class="group bg-white block no-underline hover:bg-[#FAFAFA] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] border-b border-[#EAEAEA] flex items-center justify-center overflow-hidden relative">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Image</span>
-                    <div class="absolute inset-0 bg-[#16A34A]/0 group-hover:bg-[#16A34A]/5 transition-colors duration-300"></div>
+            <a href="{{ url('/blog') }}" class="group block">
+                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
+                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                 </div>
-                <div class="p-8">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#8E8E93] mb-4">March 2026</p>
-                    <h3 class="text-lg font-semibold tracking-[-0.01em] text-black mb-3 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">
-                        The Case for Restraint in Interface Design
-                    </h3>
-                    <p class="text-sm font-normal leading-[1.6] text-gray-500 mb-4">Why the best interfaces are the ones you barely notice — and how to design them.</p>
-                    <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                        Read article
-                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Design</p>
+                    <span class="text-[#EAEAEA]">·</span>
+                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">6 min read</p>
+                </div>
+                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">The Case for Restraint in Interface Design</h3>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Every pixel competes for attention. The strongest interfaces don't add more — they remove everything that doesn't serve the user.</p>
+                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
+                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                 </div>
             </a>
-            <a href="#" class="group bg-white block no-underline hover:bg-[#FAFAFA] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] border-b border-[#EAEAEA] flex items-center justify-center overflow-hidden relative">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Image</span>
-                    <div class="absolute inset-0 bg-[#16A34A]/0 group-hover:bg-[#16A34A]/5 transition-colors duration-300"></div>
+            <a href="{{ url('/blog') }}" class="group block">
+                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
+                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                 </div>
-                <div class="p-8">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#8E8E93] mb-4">January 2026</p>
-                    <h3 class="text-lg font-semibold tracking-[-0.01em] text-black mb-3 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">
-                        Typography as Architecture
-                    </h3>
-                    <p class="text-sm font-normal leading-[1.6] text-gray-500 mb-4">Lessons from Apple, Linear, and the typographers who shaped modern digital products.</p>
-                    <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                        Read article
-                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Engineering</p>
+                    <span class="text-[#EAEAEA]">·</span>
+                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">10 min read</p>
+                </div>
+                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">Typography as Architecture</h3>
+                <p class="text-sm text-gray-500 leading-relaxed mb-4">Type isn't just decoration — it's the structure through which users read, scan, and understand. Good typography makes complex information feel simple.</p>
+                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
+                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                 </div>
             </a>
         </div>
@@ -1115,7 +1109,7 @@
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Published Work</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">Books</h2>
         <div class="border-t border-[#EAEAEA]">
-            <a href="#" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>
@@ -1123,14 +1117,14 @@
                 <div class="flex-1 pt-1">
                     <h3 class="text-xl font-semibold tracking-[-0.01em] text-black mb-2 group-hover:text-[#16A34A] transition-colors duration-300">The Quiet Interface</h3>
                     <p class="text-sm text-[#8E8E93] mb-3">2025 · Design Philosophy</p>
-                    <p class="text-sm text-gray-500 leading-relaxed mb-4">A meditation on restraint, whitespace, and the art of designing interfaces that respect the user's attention.</p>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-4">In a world of noisy products, the quietest interfaces often feel the most premium. Here's why restraint is a feature, not a compromise.</p>
                     <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
                         View book
                         <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                     </div>
                 </div>
             </a>
-            <a href="#" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>
@@ -1145,7 +1139,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>

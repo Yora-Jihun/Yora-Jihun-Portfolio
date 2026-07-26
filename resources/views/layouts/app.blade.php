@@ -6,6 +6,7 @@
     <meta name="description" content="Yora Jihun - Portfolio">
     <title>Yora Jihun</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body class="font-sans antialiased text-gray-900 bg-white">
     @include('components.navbar')
@@ -13,5 +14,6 @@
 <main class="main-content pt-16">
     @yield('content')
 </main>
+@livewireScripts
 </body>
 </html>
