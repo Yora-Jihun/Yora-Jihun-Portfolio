@@ -534,7 +534,7 @@
                         }
                         @keyframes marquee {
                             0% { transform: translateX(0); }
-                            100% { transform: translateX(-33.333%); }
+                            100% { transform: translateX(-50%); }
                         }
                         .animate-marquee {
                             animation: marquee 40s linear infinite;
@@ -983,123 +983,159 @@
     </div>
     <div class="relative">
         <div class="flex gap-6 animate-marquee hover:[animation-play-state:paused]">
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Yora's ability to translate complex requirements into elegant, scalable systems is unmatched. Working with them elevated our entire product."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">AS</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Yora's ability to translate complex requirements into elegant, scalable systems is unmatched. Working with them elevated our entire product. The attention to detail and architectural foresight made all the difference."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Anna Santos</p>
-                        <p class="text-xs text-[#8E8E93]">CTO, TechVentures Inc.</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Anna Santos</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">CTO, TechVentures Inc.</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"An exceptional engineer who brings both technical depth and design sensibility. Every collaboration has been outstanding."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">JC</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"An exceptional engineer who brings both technical depth and design sensibility. Every collaboration has been outstanding. Yora consistently finds elegant solutions to hard problems."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">James Cruz</p>
-                        <p class="text-xs text-[#8E8E93]">VP Engineering, CloudScale</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">James Cruz</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">VP Engineering, CloudScale</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Rare combination of systems thinking and creative problem-solving. Yora consistently delivers work that exceeds expectations."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">MR</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Rare combination of systems thinking and creative problem-solving. Yora consistently delivers work that exceeds expectations. Every system they design is built to scale."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Maria Reyes</p>
-                        <p class="text-xs text-[#8E8E93]">Design Director, Studio Nine</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Maria Reyes</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">Design Director, Studio Nine</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"A true partner in innovation. Yora's insights on architecture and AI integration transformed our platform."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">DL</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"A true partner in innovation. Yora's insights on architecture and AI integration transformed our platform. The way they bridge infrastructure and product is truly rare."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">David Lim</p>
-                        <p class="text-xs text-[#8E8E93]">Founder, NextGen Robotics</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">David Lim</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">Founder, NextGen Robotics</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Working with Yora was a game-changer. Their expertise in Laravel and AI helped us ship features in record time."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">SP</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Working with Yora was a game-changer. Their expertise in Laravel and AI helped us ship features in record time. The quality and speed were unlike anything we had experienced before."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Sarah Park</p>
-                        <p class="text-xs text-[#8E8E93]">PM, Enterprise Solutions</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Sarah Park</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">PM, Enterprise Solutions</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Yora brings a rare blend of engineering rigor and creative vision. Every project touched by their hand turns into something special."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">RK</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Yora brings a rare blend of engineering rigor and creative vision. Every project touched by their hand turns into something special. I continue to be impressed by their depth of knowledge."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Robert Kim</p>
-                        <p class="text-xs text-[#8E8E93]">CEO, Horizon Labs</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Robert Kim</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">CEO, Horizon Labs</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Yora's ability to translate complex requirements into elegant, scalable systems is unmatched. Working with them elevated our entire product."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">AS</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Yora's ability to translate complex requirements into elegant, scalable systems is unmatched. Working with them elevated our entire product. The attention to detail and architectural foresight made all the difference."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Anna Santos</p>
-                        <p class="text-xs text-[#8E8E93]">CTO, TechVentures Inc.</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Anna Santos</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">CTO, TechVentures Inc.</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"An exceptional engineer who brings both technical depth and design sensibility. Every collaboration has been outstanding."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">JC</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"An exceptional engineer who brings both technical depth and design sensibility. Every collaboration has been outstanding. Yora consistently finds elegant solutions to hard problems."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">James Cruz</p>
-                        <p class="text-xs text-[#8E8E93]">VP Engineering, CloudScale</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">James Cruz</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">VP Engineering, CloudScale</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Rare combination of systems thinking and creative problem-solving. Yora consistently delivers work that exceeds expectations."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">MR</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Rare combination of systems thinking and creative problem-solving. Yora consistently delivers work that exceeds expectations. Every system they design is built to scale."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Maria Reyes</p>
-                        <p class="text-xs text-[#8E8E93]">Design Director, Studio Nine</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Maria Reyes</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">Design Director, Studio Nine</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"A true partner in innovation. Yora's insights on architecture and AI integration transformed our platform."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">DL</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"A true partner in innovation. Yora's insights on architecture and AI integration transformed our platform. The way they bridge infrastructure and product is truly rare."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">David Lim</p>
-                        <p class="text-xs text-[#8E8E93]">Founder, NextGen Robotics</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">David Lim</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">Founder, NextGen Robotics</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Working with Yora was a game-changer. Their expertise in Laravel and AI helped us ship features in record time."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">SP</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Working with Yora was a game-changer. Their expertise in Laravel and AI helped us ship features in record time. The quality and speed were unlike anything we had experienced before."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Sarah Park</p>
-                        <p class="text-xs text-[#8E8E93]">PM, Enterprise Solutions</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Sarah Park</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">PM, Enterprise Solutions</p>
                     </div>
                 </div>
             </div>
-            <div class="min-w-[340px] p-8 rounded-2xl border border-[#EAEAEA] bg-white">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">"Yora brings a rare blend of engineering rigor and creative vision. Every project touched by their hand turns into something special."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center text-xs font-semibold text-gray-600">RK</div>
+            <div class="w-[300px] p-6 rounded-xl border border-[#EAEAEA] bg-white hover:border-[#16A34A]/30 hover:shadow-sm transition-all duration-300 flex flex-col">
+                <div class="flex items-center gap-1 mb-4 text-[#16A34A]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4.995v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4.994v10h-9.994z"></path></svg>
+                </div>
+                <p class="text-[0.8125rem] text-gray-600 leading-[1.7] mb-5 italic">"Yora brings a rare blend of engineering rigor and creative vision. Every project touched by their hand turns into something special. I continue to be impressed by their depth of knowledge."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#EAEAEA] mt-auto">
+                    <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover ring-1 ring-gray-100">
                     <div>
-                        <p class="text-sm font-semibold text-black">Robert Kim</p>
-                        <p class="text-xs text-[#8E8E93]">CEO, Horizon Labs</p>
+                        <p class="text-sm font-semibold text-black tracking-[-0.01em]">Robert Kim</p>
+                        <p class="text-[0.6875rem] text-[#8E8E93] mt-0.5">CEO, Horizon Labs</p>
                     </div>
                 </div>
             </div>
