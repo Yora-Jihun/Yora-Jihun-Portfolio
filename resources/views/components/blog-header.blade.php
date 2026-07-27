@@ -6,14 +6,22 @@
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div class="lg:col-span-2">
-                @include('components.blog-sidebar-left')
+                @include('components.blog-sidebar-left', [
+                    'category' => $category ?? null,
+                    'read_time' => $read_time ?? null,
+                    'published_at' => $published_at ?? null,
+                    'author' => $author ?? null
+                ])
             </div>
             <div class="lg:col-span-7">
                 <h1 class="text-[2rem] md:text-[2.75rem] lg:text-[3.5rem] font-semibold tracking-[-0.03em] text-black mb-4 md:mb-5 leading-[1.1]">{{ $title }}</h1>
                 <p class="text-base text-gray-600 leading-relaxed mt-5">{{ $excerpt }}</p>
             </div>
             <div class="lg:col-span-3">
-                @include('components.blog-sidebar-right')
+                @include('components.blog-sidebar-right', [
+                    'author' => $author ?? null,
+                    'published_at' => $published_at ?? null
+                ])
             </div>
         </div>
     </div>

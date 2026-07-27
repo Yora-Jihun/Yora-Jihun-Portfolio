@@ -1,14 +1,16 @@
 <div class="hidden lg:block">
     <div class="sticky top-24 space-y-6">
-        <span class="inline-block text-[0.625rem] font-semibold tracking-[0.08em] uppercase text-[#16A34A] bg-emerald-50 px-2.5 py-1 rounded-full transition-all duration-200 hover:bg-emerald-100 cursor-default">Design</span>
+        <span class="inline-block text-[0.625rem] font-semibold tracking-[0.08em] uppercase text-[#16A34A] bg-emerald-50 px-2.5 py-1 rounded-full transition-all duration-200 hover:bg-emerald-100 cursor-default">{{ $category ?? 'General' }}</span>
         <div class="space-y-1.5">
+            @if($published_at)
             <div class="flex items-center gap-1.5">
-                <svg class="w-3 h-3 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-                <p class="text-xs font-medium text-black tracking-[-0.01em]">June 2026</p>
+                <svg class="w-3 h-3 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
+                <p class="text-xs font-medium text-black tracking-[-0.01em]">{{ format_post_date($published_at) }}</p>
             </div>
+            @endif
             <div class="flex items-center gap-1.5">
                 <svg class="w-3 h-3 text-[#8E8E93]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <p class="text-xs text-[#8E8E93]">8 min read</p>
+                <p class="text-xs text-[#8E8E93]">{{ $read_time ?? 5 }} min read</p>
             </div>
         </div>
         <div class="h-px bg-[#EAEAEA]"></div>

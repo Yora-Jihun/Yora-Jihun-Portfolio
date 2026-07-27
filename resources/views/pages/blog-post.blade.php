@@ -4,53 +4,50 @@
 <!-- Reading Progress Bar -->
 <livewire:reading-progress-bar />
 
-<!-- Blog Post Header (includes back link, sidebars, title, excerpt) -->
+<!-- Blog Post Header -->
 @include('components.blog-header', [
-    'title' => 'Designing Systems That Scale Without Losing Soul',
-    'excerpt' => 'Most design systems start with the best intentions and end in rigid sprawl. Here\'s how to build components that give teams speed without sacrificing craft.'
+    'title' => $post->title,
+    'excerpt' => $post->excerpt,
+    'category' => $post->category,
+    'read_time' => $post->read_time,
+    'published_at' => $post->published_at,
+    'author' => $post->author
 ])
 
 <!-- Article Content -->
 <section class="border-t border-[#EAEAEA]">
     <div class="max-w-[1200px] mx-auto px-6 py-12 md:py-16">
         <article class="max-w-[740px] mx-auto">
+            @if($post->cover_image)
+                <div class="mb-10">
+                    <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-auto cursor-pointer" id="cover-image-full">
+                </div>
+            @endif
             <div class="prose prose-gray max-w-none">
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    Most design systems start with the best intentions and end in rigid sprawl. You know the pattern: a small team builds something elegant, it gets adopted, and then a dozen product squads start extending it in ways the original authors never imagined. Within a year, the system is a patchwork of overrides, deprecated props, and tribal knowledge.
-                </p>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    The problem isn't scale itself. It's the assumption that consistency means uniformity. Too many systems treat every button, card, and form field as an opportunity to standardize, when the real job of a system is to give designers and developers enough structure to move quickly without painting themselves into corners.
-                </p>
-                <h2 id="section-1" class="text-xl font-semibold text-black mt-12 mb-4">The tension between speed and craft</h2>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    When teams move fast, they reach for abstractions. That's natural. But the best systems I've worked on share a common trait: they distinguish between what must be consistent and what can vary. A design token for color spacing is non-negotiable. A mandatory card layout for every data display is not.
-                </p>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    The art is in knowing where to draw the line. And the only way to learn that line is to build, observe where the system breaks, and then refine. A system that doesn't evolve becomes a museum piece — technically consistent, but useless for real work.
-                </p>
-                <h2 id="section-2" class="text-xl font-semibold text-black mt-12 mb-4">Practical guardrails</h2>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    Start with principles, not patterns. A short, lived document that says "we value accessibility, performance, and clarity" will serve you better than a 200-page pattern library. Principles give people permission to make good decisions; patterns only tell them what to do when the pattern already exists.
-                </p>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    Build for removal, not just addition. Every component, token, and guideline should have an owner and a sunset date. If nobody can tell you why something exists, delete it. The space you create is more valuable than the thing you remove.
-                </p>
-                <blockquote class="border-l-2 border-[#16A34A] pl-6 py-2 my-10 text-lg text-gray-800 italic leading-relaxed bg-emerald-50/40 rounded-r-lg">
-                    "The best design systems are not the ones that control every pixel. They are the ones that disappear, letting teams do their best work without noticing the rails."
-                </blockquote>
-                <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                    Finally, treat your system as a product. It has users, it has a roadmap, and it needs care. Assign a small, dedicated team to steward it. Open contribution channels. Measure adoption and satisfaction. A design system that isn't maintained will be abandoned, no matter how well it was built.
-                </p>
+                @php
+                    $paragraphs = explode("\n\n", $post->body);
+                @endphp
+                @foreach($paragraphs as $paragraph)
+                    @if(trim($paragraph))
+                        <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
+                            {{ trim($paragraph) }}
+                        </p>
+                    @endif
+                @endforeach
             </div>
 
             <div class="mt-16 pt-8 border-t border-[#EAEAEA]">
                 <div class="lg:hidden">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
-                            <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-10 h-10 rounded-full object-cover ring-1 ring-gray-100">
+                            @if($post->author && $post->author->avatar)
+                                <img src="{{ $post->author->avatar }}" alt="{{ $post->author->name }}" class="w-10 h-10 rounded-full object-cover ring-1 ring-gray-100">
+                            @else
+                                <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-10 h-10 rounded-full object-cover ring-1 ring-gray-100">
+                            @endif
                             <div>
-                                <p class="text-sm font-semibold text-black">Yora Jihun</p>
-                                <p class="text-xs text-[#8E8E93]">June 15, 2026</p>
+                                <p class="text-sm font-semibold text-black">{{ $post->author->name ?? 'Yora Jihun' }}</p>
+                                <p class="text-xs text-[#8E8E93]">{{ format_post_date($post->published_at) }}</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
@@ -74,4 +71,35 @@
         </article>
     </div>
 </section>
+
+<div id="image-lightbox" class="fixed inset-0 z-50 hidden bg-black/90 items-center justify-center p-6" onclick="closeLightbox()">
+    <img src="" alt="Full view" class="max-w-full max-h-full object-contain" id="lightbox-image" onclick="event.stopPropagation()">
+</div>
+
+<script>
+    const coverImage = document.getElementById('cover-image-full');
+    if (coverImage) {
+        coverImage.addEventListener('click', function() {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-image');
+            lightboxImg.src = this.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('image-lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
 @endsection
