@@ -60,7 +60,7 @@
         
         <div class="relative w-72 h-[2px] bg-[#111] rounded-full overflow-hidden mx-auto mb-8 border border-[#16A34A]/10">
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#16A34A]/20 to-transparent animate-pulse"></div>
-            <div id="loading-bar" class="h-full bg-gradient-to-r from-[#16A34A] via-[#22c55e] to-[#16A34A] rounded-full relative" style="width: 0%; box-shadow: 0 0 20px rgba(22,163,74,0.8), 0 0 40px rgba(22,163,74,0.4);">
+            <div id="loading-bar" class="h-full bg-gradient-to-r from-[#16A34A] via-[#22c55e] to-[#16A34A] rounded-full relative" style="width: 0%; box-shadow: 0 0 20px rgba(22,163,74,0.8), 0 0 40px rgba(22,163,74,0.4); transition: width 0.1s ease-out;">
                 <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-[0_0_10px_rgba(22,163,74,1)]"></div>
             </div>
         </div>
@@ -94,16 +94,15 @@
     const messages = ['Initializing', 'Loading assets', 'Establishing connection', 'Decrypting data', 'Synchronizing', 'Almost ready'];
     let messageIndex = 0;
     let progress = 0;
-    let frameCount = 0;
+    let currentDisplay = 0;
+    const minDisplayTime = 2000;
+    const startTime = Date.now();
     
     const interval = setInterval(() => {
-        progress += Math.random() * 2.5 + 0.3;
-        if (progress > 95) progress = 95;
+        progress += Math.random() * 3 + 0.5;
+        if (progress > 99) progress = 99;
         
-        const roundedProgress = Math.floor(progress);
         loadingBar.style.width = progress + '%';
-        loadingPercent.textContent = roundedProgress.toString().padStart(2, '0');
-        frameCounter.textContent = Math.floor(Math.random() * 60).toString().padStart(2, '0');
         
         if (Math.random() > 0.6) {
             const randomChar = matrixChars[Math.floor(Math.random() * matrixChars.length)];
@@ -125,28 +124,31 @@
             messageIndex++;
             loadingText.textContent = messages[messageIndex];
         }
-    }, 120);
+    }, 100);
 
-    function glitchEffect() {
-        if (Math.random() > 0.85) {
-            loadingScreen.style.transform = `translate(${Math.random() * 3 - 1.5}px, ${Math.random() * 3 - 1.5}px)`;
-            loadingScreen.style.filter = `hue-rotate(${Math.random() * 20 - 10}deg)`;
-            setTimeout(() => {
-                loadingScreen.style.transform = 'translate(0, 0)';
-                loadingScreen.style.filter = 'hue-rotate(0deg)';
-            }, 30);
+    let animationFrameId = null;
+    
+    function animateCounter() {
+        if (currentDisplay < Math.floor(progress)) {
+            currentDisplay++;
+            loadingPercent.textContent = currentDisplay.toString().padStart(2, '0');
+            frameCounter.textContent = Math.floor(Math.random() * 60).toString().padStart(2, '0');
+        }
+        if (currentDisplay < 100) {
+            animationFrameId = requestAnimationFrame(animateCounter);
         }
     }
-    
-    const glitchInterval = setInterval(glitchEffect, 150);
+    animationFrameId = requestAnimationFrame(animateCounter);
 
-    window.addEventListener('load', () => {
+    function finishLoading() {
         clearInterval(interval);
-        clearInterval(glitchInterval);
-        loadingBar.style.width = '100%';
-        loadingPercent.textContent = '100';
         loadingText.textContent = 'Ready';
         frameCounter.textContent = '60';
+        
+        progress = 100;
+        currentDisplay = 100;
+        loadingBar.style.width = '100%';
+        loadingPercent.textContent = '100';
         
         matrixChars.forEach((char, i) => {
             setTimeout(() => {
@@ -158,15 +160,20 @@
         });
         
         setTimeout(() => {
-            loadingScreen.style.transition = 'opacity 1s ease-out, transform 0.8s ease-out, filter 0.8s ease-out';
+            loadingScreen.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
             loadingScreen.style.opacity = '0';
-            loadingScreen.style.transform = 'scale(1.02)';
             loadingScreen.style.filter = 'brightness(1.5)';
             
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
-            }, 1000);
-        }, 600);
+            }, 800);
+        }, 500);
+    }
+
+    window.addEventListener('load', () => {
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minDisplayTime - elapsed);
+        setTimeout(finishLoading, remaining);
     });
 })();
 </script>

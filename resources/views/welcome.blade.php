@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('preload')
+    @include('components.loading-screen')
+@endsection
+
 @section('content')
 
 <!-- Hero / Landing -->
@@ -1332,26 +1336,5 @@
         </div>
     </div>
 </footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const nodes = document.querySelectorAll('.connections .node');
-        const lines = document.querySelectorAll('.connections .connection-line');
-
-        nodes.forEach((node, index) => {
-            node.addEventListener('mouseenter', function() {
-                if (lines[index]) {
-                    lines[index].classList.add('active');
-                }
-            });
-
-            node.addEventListener('mouseleave', function() {
-                if (lines[index]) {
-                    lines[index].classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
 
 @endsection
