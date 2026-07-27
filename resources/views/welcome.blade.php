@@ -11,187 +11,48 @@
     <div class="absolute inset-0 pointer-events-none"></div>
 
     <div class="absolute inset-0 z-[5] overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px); background-size: 32px 32px;"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(rgba(0,255,200,0.04) 1px, transparent 1px); background-size: 32px 32px;"></div>
     </div>
 
     <div class="relative z-10 w-full max-w-[1200px] mx-auto flex flex-col items-center">
-        <div class="orbit-container mb-1 md:mb-4 relative">
-            <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0 gap-24 md:gap-68 hidden md:flex">
-                <span class="text-[clamp(3rem,10vw,8rem)] font-black text-black opacity-[0.12] leading-none tracking-[10px] whitespace-nowrap select-none">YORA</span>
-                <span class="text-[clamp(3rem,10vw,8rem)] font-black text-black opacity-[0.12] leading-none tracking-[10px] whitespace-nowrap select-none">JI-HUN</span>
-            </div>
-            <div class="carousel-stage">
-                <div class="carousel-ring">
-                    <div class="carousel-card-wrapper" style="--angle: 0">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#F3F4F6]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Social Media Platform</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">A full-featured social networking platform with real-time feeds and engagement tools.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Vue.js</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+        <div class="w-full h-[80vh] mt-8 mb-6">
+            <div class="cyber-card w-full h-full rounded-2xl md:rounded-[20px] px-6 py-10 md:px-10 md:py-14 flex flex-col items-center justify-between">
+                <div class="cyber-card-bg"></div>
+                <div class="cyber-border-glow tl"></div>
+                <div class="cyber-border-glow tr"></div>
+                <div class="cyber-border-glow bl"></div>
+                <div class="cyber-border-glow br"></div>
+
+                <div class="w-full flex items-center justify-between relative z-10">
+                    <div class="flex items-center gap-3">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#16A34A]"></span>
+                        </span>
+                        <span class="cyber-label text-[0.5625rem] md:text-[0.6875rem] font-semibold uppercase text-[#9ca3af]">System Online</span>
                     </div>
-                    <div class="carousel-card-wrapper" style="--angle: 40">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#E5E7EB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Smart Attendance</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Intelligent attendance tracking with facial recognition and automated reporting.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Livewire</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                    <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono text-[#9ca3af]">v4.2.1</span>
+                </div>
+
+                <div class="flex flex-col items-center gap-5 relative z-10">
+                    <h1 class="cyber-title text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight text-white text-center leading-[0.9]">YORA JIHUN</h1>
+                    <span class="text-[0.6875rem] md:text-[0.875rem] font-medium tracking-wide text-[#9ca3af]">Lead System Engineer &amp; AI Specialist</span>
+                </div>
+
+                <div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-4 relative z-10">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono text-[#9ca3af]">LOC::SEOUL</span>
+                        <span class="text-[#16A34A]">/</span>
+                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono text-[#9ca3af]">FOCUS::AI_ROBOTICS</span>
+                        <span class="text-[#16A34A]">/</span>
+                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono text-[#9ca3af]">EXP::7Y</span>
                     </div>
-                    <div class="carousel-card-wrapper" style="--angle: 80">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#D1D5DB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Authentication & OTP</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Secure authentication system with OTP verification and multi-factor authentication.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Redis</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Twilio</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 120">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#E5E7EB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Course Platform</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Interactive learning management system with progress tracking and assessments.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Tailwind</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Stripe</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 160">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#D1D5DB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">E-Commerce Dashboard</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Comprehensive admin dashboard for managing products, orders, and analytics.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Docker</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 200">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#F3F4F6]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">API Gateway</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">High-performance API gateway with rate limiting, caching, and monitoring.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Redis</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Docker</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 240">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#D1D5DB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Authentication & OTP</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Secure authentication system with OTP verification and multi-factor authentication.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Redis</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Twilio</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 280">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#E5E7EB]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Smart Attendance</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">Intelligent attendance tracking with facial recognition and automated reporting.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Livewire</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-card-wrapper" style="--angle: 320">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-back"></div>
-                            <div class="carousel-card">
-                            <div class="w-full h-[150px] bg-gray-100 rounded-[14px] border border-gray-100 flex-shrink-0 overflow-hidden carousel-card-image">
-                                <div class="w-full h-full bg-[#F3F4F6]"></div>
-                            </div>
-                            <div class="flex-1 flex flex-col min-h-0 pt-0.5">
-                                <h3 class="text-[0.8125rem] font-semibold text-gray-900 tracking-tight leading-snug mb-0.5">Social Media Platform</h3>
-                                <p class="text-[0.6875rem] text-gray-500 leading-relaxed line-clamp-2 flex-grow">A full-featured social networking platform with real-time feeds and engagement tools.</p>
-                                <div class="flex flex-wrap gap-1 mt-auto mb-0">
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Laravel</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">Vue.js</span>
-                                    <span class="text-[0.5625rem] font-medium text-gray-600 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                    <div class="flex items-center gap-2 text-[#16A34A]">
+                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono tracking-widest">STATUS::ACTIVE</span>
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#16A34A]"></span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -252,22 +113,6 @@
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Kubernetes</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TensorFlow</span>
                     </div>
-                    <div class="flex items-center gap-6 shrink-0">
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Laravel</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Google</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Microsoft</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Vue.js</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Python</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">PostgreSQL</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Docker</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">AWS</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">React</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Node.js</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TypeScript</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Redis</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Kubernetes</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TensorFlow</span>
-                    </div>
                 </div>
             </div>
             <div class="w-px h-56 md:h-64 mt-3 relative bg-gray-200">
@@ -276,104 +121,72 @@
                     <span class="relative inline-flex rounded-full h-3 w-3 bg-[#16A34A]"></span>
                 </span>
             </div>
-        </div>
     </div>
-
-    <style>
-        @keyframes marquee {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-25%, 0, 0); }
-        }
-        .animate-marquee {
-            animation: marquee 35s linear infinite;
-            will-change: transform;
-            backface-visibility: hidden;
-        }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .animate-marquee {
-                animation: none;
-            }
-        }
-        @media (max-width: 768px) {
-            .animate-marquee {
-                animation-duration: 45s;
-            }
-        }
-        .orbit-container { position: relative; width: 700px; height: 700px; margin: 0 auto; max-width: 100%; }
-        .carousel-stage { position: absolute; inset: 0; perspective: 1200px; display: flex; align-items: center; justify-content: center; }
-        .carousel-ring { position: relative; width: 0; height: 0; transform-style: preserve-3d; }
-        .carousel-card-wrapper { position: absolute; left: 0; top: 0; width: 220px; height: 300px; margin-left: -110px; margin-top: -150px; transform: rotateY(calc(var(--angle) * 1deg)) translateZ(360px); backface-visibility: hidden; }
-        .carousel-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; }
-        .carousel-card-back { position: absolute; width: 220px; height: 300px; border-radius: 20px; background: #FAFAFA; border: 1px solid #E5E7EB; border-top-color: #FFFFFF; border-right-color: #FFFFFF; border-bottom-color: rgba(0,0,0,0.06); border-left-color: rgba(0,0,0,0.06); top: 10px; left: -10px; z-index: 0; }
-        .carousel-card { width: 220px; height: 300px; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px; cursor: pointer; position: relative; overflow: hidden; z-index: 1; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); }
-        .carousel-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.04) 100%); border-radius: 20px; pointer-events: none; z-index: 2; }
-        .carousel-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 45%; background: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent); border-radius: 20px 20px 0 0; pointer-events: none; z-index: 3; }
-        .carousel-card-image { width: 100%; height: 150px; min-height: 0; border-radius: 14px; flex-shrink: 0; transform: perspective(700px) rotateX(8deg); transform-origin: top center; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
-        .carousel-card-body { flex: 1; display: flex; flex-direction: column; min-height: 0; padding-top: 2px; }
-        .carousel-card-title { font-size: 0.8125rem; font-weight: 600; color: #111827; margin-bottom: 5px; letter-spacing: -0.01em; line-height: 1.3; }
-        .carousel-card-desc { font-size: 0.6875rem; color: #6B7280; line-height: 1.45; margin-bottom: 12px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .carousel-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-        .carousel-card-tag { font-size: 0.5625rem; font-weight: 500; color: #374151; background: #F9FAFB; padding: 2px 6px; border-radius: 3px; letter-spacing: 0.02em; border: 1px solid #F3F4F6; }
-        .info-strip { border-top: 1px solid #E5E7EB; }
-        .info-strip-item { padding: 40px 32px; border-right: 1px solid #E5E7EB; }
-        .info-strip-item:last-child { border-right: none; }
-        .info-strip-title { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8E8E93; margin-bottom: 8px; }
-        .info-strip-text { font-size: 0.9375rem; font-weight: 500; color: #374151; line-height: 1.5; }
-        @media (max-width: 1024px) {
-            .orbit-container { width: 560px; height: 560px; }
-            .carousel-card-wrapper { width: 155px; height: 215px; margin-left: -77px; margin-top: -107px; transform: rotateY(calc(var(--angle) * 1deg)) translateZ(260px); }
-            .carousel-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; }
-            .carousel-card-back { width: 155px; height: 215px; border-radius: 16px; background: #FAFAFA; border: 1px solid #E5E7EB; border-top-color: #FFFFFF; border-right-color: #FFFFFF; border-bottom-color: rgba(0,0,0,0.06); border-left-color: rgba(0,0,0,0.06); top: 6px; left: -6px; z-index: 0; }
-            .carousel-card { width: 155px; height: 215px; padding: 13px; border-radius: 16px; gap: 8px; position: relative; overflow: hidden; z-index: 1; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); }
-            .carousel-card::before { border-radius: 16px; }
-            .carousel-card::after { border-radius: 16px 16px 0 0; }
-            .carousel-card-title { font-size: 0.75rem; margin-bottom: 3px; }
-            .carousel-card-desc { font-size: 0.625rem; margin-bottom: 6px; }
-            .carousel-card-tags { gap: 4px; margin-bottom: 7px; }
-            .carousel-card-tag { font-size: 0.5rem; padding: 1px 4px; }
-        }
-        @media (max-width: 768px) {
-            .orbit-container { width: 600px; height: 600px; }
-            .carousel-card-wrapper { width: 140px; height: 195px; margin-left: -70px; margin-top: -97px; transform: rotateY(calc(var(--angle) * 1deg)) translateZ(520px); }
-            .carousel-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; }
-            .carousel-card-back { width: 140px; height: 195px; border-radius: 15px; background: #FAFAFA; border: 1px solid #E5E7EB; border-top-color: #FFFFFF; border-right-color: #FFFFFF; border-bottom-color: rgba(0,0,0,0.06); border-left-color: rgba(0,0,0,0.06); top: 5px; left: -5px; z-index: 0; }
-            .carousel-card { width: 140px; height: 195px; padding: 11px; border-radius: 15px; gap: 7px; position: relative; overflow: hidden; z-index: 1; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); }
-            .carousel-card::before { border-radius: 15px; }
-            .carousel-card::after { border-radius: 15px 15px 0 0; }
-            .carousel-card-image { height: 100px; border-radius: 12px; }
-            .carousel-card-title { font-size: 0.7rem; margin-bottom: 2px; }
-            .carousel-card-desc { font-size: 0.6rem; margin-bottom: 4px; }
-            .carousel-card-tags { gap: 3px; margin-bottom: 5px; }
-            .carousel-card-tag { font-size: 0.5rem; padding: 1px 3px; }
-            .info-strip-item { padding: 24px 16px; }
-            .info-strip-text { font-size: 0.8125rem; }
-        }
-        @media (max-width: 480px) {
-            .orbit-container { width: 560px; height: 560px; }
-            .carousel-card-wrapper { width: 170px; height: 230px; margin-left: -85px; margin-top: -115px; transform: rotateY(calc(var(--angle) * 1deg)) translateZ(580px); }
-            .carousel-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; }
-            .carousel-card-back { width: 170px; height: 230px; border-radius: 16px; background: #FAFAFA; border: 1px solid #E5E7EB; border-top-color: #FFFFFF; border-right-color: #FFFFFF; border-bottom-color: rgba(0,0,0,0.06); border-left-color: rgba(0,0,0,0.06); top: 6px; left: -6px; z-index: 0; }
-            .carousel-card { width: 170px; height: 230px; padding: 12px; border-radius: 16px; gap: 8px; position: relative; overflow: hidden; z-index: 1; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); }
-            .carousel-card::before { border-radius: 16px; }
-            .carousel-card::after { border-radius: 16px 16px 0 0; }
-            .carousel-card-image { height: 100px; border-radius: 12px; }
-            .carousel-card-title { font-size: 0.75rem; margin-bottom: 2px; }
-            .carousel-card-desc { font-size: 0.65rem; margin-bottom: 4px; }
-            .carousel-card-tags { gap: 3px; margin-bottom: 5px; }
-            .carousel-card-tag { font-size: 0.55rem; padding: 2px 4px; }
-        }
-        .connections-scroll::-webkit-scrollbar {
-            display: none;
-        }
-        .connections-scroll {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-    </style>
 </section>
+
+<style>
+    @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100vh); }
+    }
+    @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        92% { opacity: 1; }
+        93% { opacity: 0.6; }
+        94% { opacity: 1; }
+        96% { opacity: 0.7; }
+        97% { opacity: 1; }
+    }
+    .cyber-card {
+        position: relative;
+        background: linear-gradient(180deg, rgba(10,10,14,0.92), rgba(6,6,10,0.96));
+        border: 1px solid rgba(0,255,200,0.18);
+        box-shadow: 0 0 0 1px rgba(0,255,200,0.06), 0 20px 60px rgba(0,0,0,0.35), inset 0 0 30px rgba(0,255,200,0.04);
+        overflow: hidden;
+    }
+    .cyber-card-bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(0,255,200,0.08) 0%, transparent 60%), radial-gradient(circle at 20% 80%, rgba(0,255,200,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0,255,200,0.04) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    .cyber-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,200,0.03) 2px, rgba(0,255,200,0.03) 4px);
+        pointer-events: none;
+    }
+    .cyber-card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(0,255,200,0.08), transparent);
+        animation: scanline 6s linear infinite;
+        pointer-events: none;
+    }
+    .cyber-border-glow {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0,255,200,0.7);
+        box-shadow: 0 0 8px rgba(0,255,200,0.4), inset 0 0 6px rgba(0,255,200,0.25);
+    }
+    .cyber-border-glow.tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+    .cyber-border-glow.tr { top: 10px; right: 10px; border-left: none; border-bottom: none; }
+    .cyber-border-glow.bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
+    .cyber-border-glow.br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+    .cyber-title {
+        animation: flicker 8s infinite;
+        text-shadow: 0 0 20px rgba(0,255,200,0.55), 0 0 60px rgba(0,255,200,0.18);
+    }
+    .cyber-label {
+        letter-spacing: 0.35em;
+        text-shadow: 0 0 10px rgba(0,255,200,0.4);
+    }
+</style>
 
 <!-- Profile Overview -->
 <section class="pt-0 pb-24 border-b border-[#EAEAEA]">
