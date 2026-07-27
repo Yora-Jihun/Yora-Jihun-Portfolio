@@ -9,6 +9,7 @@
     @livewireStyles
 </head>
 <body class="font-sans antialiased text-gray-900 bg-white">
+    @include('components.loading-screen')
     @include('components.navbar')
 
 <main class="main-content pt-16">
