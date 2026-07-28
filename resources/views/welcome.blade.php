@@ -64,8 +64,8 @@
         <div class="flex flex-col items-center relative z-10">
             <p class="text-[0.5rem] md:text-[0.625rem] font-semibold tracking-[0.1em] md:tracking-[0.25em] uppercase text-emerald-500">Current Role: Lead System Engineer &amp; AI Specialist</p>
             <div class="w-full overflow-hidden mt-6 relative">
-                <div class="flex whitespace-nowrap animate-marquee gap-6" role="marquee" aria-label="Technology stack">
-                    <div class="flex items-center gap-6 shrink-0">
+                <div class="flex whitespace-nowrap animate-marquee" role="marquee" aria-label="Technology stack">
+                    <div class="flex items-center gap-6 shrink-0 pr-6">
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Laravel</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Google</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Microsoft</span>
@@ -81,23 +81,7 @@
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Kubernetes</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TensorFlow</span>
                     </div>
-                    <div class="flex items-center gap-6 shrink-0">
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Laravel</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Google</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Microsoft</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Vue.js</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Python</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">PostgreSQL</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Docker</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">AWS</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">React</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Node.js</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TypeScript</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Redis</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Kubernetes</span>
-                        <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">TensorFlow</span>
-                    </div>
-                    <div class="flex items-center gap-6 shrink-0">
+                    <div class="flex items-center gap-6 shrink-0 pr-6">
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Laravel</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Google</span>
                         <span class="px-4 py-2 rounded-lg bg-white border border-[#E5E7EB] text-sm font-semibold text-gray-600 shadow-sm hover:border-[#16A34A] hover:text-[#16A34A] hover:shadow-md transition-all duration-200">Microsoft</span>
@@ -198,65 +182,75 @@
 <!-- Profile Overview -->
 <section class="pt-0 pb-24 border-b border-[#EAEAEA]">
     <div class="max-w-[1100px] mx-auto px-6 relative z-10 mb-0 md:mb-2">
-        <div class="bg-white rounded-[20px] border border-[#F0F0F0]/60 shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden">
+        <div class="bg-white rounded-2xl border border-[#EAEAEA] overflow-hidden">
 
             <div class="px-5 py-5 md:px-12 md:py-10">
                 <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-4 md:mb-10">Profile Overview</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 border-b md:border-r border-[#F0F0F0]/60 transition-all duration-200 ease-out cursor-default">
-                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:scale-105">
-                            <x-icon name="location" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#16A34A] transition-colors duration-200" />
+                <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#EAEAEA]">
+                    <div class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A]/30 group-hover:text-[#16A34A]">
+                            <x-icon name="location" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 transition-colors duration-200" />
                         </div>
                         <div class="min-w-0">
                             <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Hometown</p>
-                            <p class="text-base md:text-[1.25rem] font-bold text-gray-900 tracking-tight leading-tight opacity-50">Seoul, South Korea</p>
+                            <p class="text-base md:text-[1.25rem] font-semibold text-gray-700 tracking-tight leading-tight">Seoul, South Korea</p>
                         </div>
                     </div>
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 border-b md:border-r border-[#F0F0F0]/60 transition-all duration-200 ease-out cursor-default">
-                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:scale-105">
-                            <x-icon name="globe" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#16A34A] transition-colors duration-200" />
+                    <div class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A]/30 group-hover:text-[#16A34A]">
+                            <x-icon name="globe" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 transition-colors duration-200" />
                         </div>
                         <div class="min-w-0">
                             <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Country</p>
-                            <p class="text-base md:text-[1.25rem] font-bold text-gray-900 tracking-tight leading-tight opacity-50">South Korea</p>
+                            <p class="text-base md:text-[1.25rem] font-semibold text-gray-700 tracking-tight leading-tight">South Korea</p>
                         </div>
                     </div>
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out cursor-default">
-                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:scale-105">
-                            <x-icon name="lightning" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#16A34A] transition-colors duration-200" />
+                    <div class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A]/30 group-hover:text-[#16A34A]">
+                            <x-icon name="lightning" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 transition-colors duration-200" />
                         </div>
                         <div class="min-w-0">
                             <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Current Role</p>
-                            <p class="text-base md:text-[1.25rem] font-bold text-gray-900 tracking-tight leading-tight opacity-50">Lead System Engineer & AI Specialist</p>
+                            <p class="text-base md:text-[1.25rem] font-semibold text-gray-700 tracking-tight leading-tight">Lead System Engineer &amp; AI Specialist</p>
                         </div>
                     </div>
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 border-b md:border-r border-[#F0F0F0]/60 transition-all duration-200 ease-out cursor-default">
-                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:scale-105">
-                            <x-icon name="clock" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#16A34A] transition-colors duration-200" />
+                    <div class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A]/30 group-hover:text-[#16A34A]">
+                            <x-icon name="clock" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 transition-colors duration-200" />
                         </div>
                         <div class="min-w-0">
                             <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Total Work Experience</p>
-                            <p class="text-base md:text-[1.25rem] font-bold text-gray-900 tracking-tight leading-tight opacity-50">7 Years</p>
+                            <p class="text-base md:text-[1.25rem] font-semibold text-gray-700 tracking-tight leading-tight">7 Years</p>
                         </div>
                     </div>
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out cursor-default">
-                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:scale-105">
-                            <x-icon name="badge-ai" class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#16A34A] transition-colors duration-200" />
+                    <div class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A]/30 group-hover:text-[#16A34A]">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-gray-400 transition-colors duration-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5.25a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5z"></path>
+</svg>
                         </div>
                         <div class="min-w-0">
                             <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Focus</p>
-                            <p class="text-base md:text-[1.25rem] font-bold text-gray-900 tracking-tight leading-tight opacity-50">Full Stack, AI, Robotics</p>
+                            <p class="text-base md:text-[1.25rem] font-semibold text-gray-700 tracking-tight leading-tight">Full Stack, AI, Robotics</p>
                         </div>
                     </div>
-                    <div class="group flex items-start gap-6 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out cursor-default bg-[#16A34A]">
-                        <div class="min-w-0 flex-1">
-                            <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-white/80 mb-1">Get to know him</p>
-                            <div class="flex items-center gap-1.5 text-white">
+                    <a href="{{ url('/experience') }}" class="group flex items-start gap-4 md:gap-5 p-4 md:p-6 transition-all duration-200 ease-out bg-emerald-50/50 hover:bg-emerald-50 border-l-2 md:border-l-0 border-emerald-500/80 no-underline">
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-emerald-200 flex items-center justify-center transition-all duration-200 ease-out group-hover:border-[#16A34A] group-hover:text-[#16A34A]">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-[#16A34A] transition-colors duration-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.25h15.75c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H4.125c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"></path>
+</svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-[#16A34A] mb-1">Get to know him</p>
+                            <div class="flex items-center gap-1.5 text-[#16A34A]">
                                 <span class="text-xs font-medium transition-all duration-200 group-hover:translate-x-0.5">Explore more</span>
-                                <x-icon name="chevron-right" class="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+</svg>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
