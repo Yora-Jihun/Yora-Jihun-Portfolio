@@ -907,7 +907,7 @@
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Published Work</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">Books</h2>
         <div class="border-t border-[#EAEAEA]">
-            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="#" onclick="openBookModal('The Quiet Interface', 'https://example.com/books/quiet-interface.pdf'); return false;" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>
@@ -922,7 +922,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="#" onclick="openBookModal('Structured Thought', 'https://example.com/books/structured-thought.pdf'); return false;" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>
@@ -937,7 +937,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/blog/dummy-post') }}" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
+            <a href="#" onclick="openBookModal('Letters to a Junior Designer', 'https://example.com/books/letters-junior-designer.pdf'); return false;" class="group flex items-start gap-6 py-8 border-b border-[#EAEAEA] no-underline hover:bg-[#FAFAFA] transition-all duration-300">
                 <div class="w-20 h-28 bg-[#F3F4F6] border border-[#EAEAEA] flex-shrink-0 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-[#16A34A]/20 transition-all duration-300 relative overflow-hidden">
                     <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF] relative z-10">Cover</span>
                     <div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#16A34A]/0 group-hover:to-[#16A34A]/5 transition-all duration-300"></div>
@@ -1150,5 +1150,59 @@
         </div>
     </div>
 </footer>
+
+<div id="book-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm items-center justify-center p-4 md:p-8" onclick="closeBookModal(event)">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-[#EAEAEA]">
+            <h3 id="book-modal-title" class="text-lg font-semibold text-black tracking-tight">Book Preview</h3>
+            <div class="flex items-center gap-3">
+                <a id="book-modal-download" href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-[#16A34A] hover:text-emerald-700 transition-colors duration-200 no-underline">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path></svg>
+                    Download PDF
+                </a>
+                <button onclick="closeBookModal()" class="text-gray-400 hover:text-black transition-colors duration-200 p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex-1 bg-gray-50 min-h-0">
+            <iframe id="book-modal-iframe" src="" class="w-full h-full min-h-[60vh] border-0" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openBookModal(title, pdfUrl) {
+        const modal = document.getElementById('book-modal');
+        const titleEl = document.getElementById('book-modal-title');
+        const iframe = document.getElementById('book-modal-iframe');
+        const downloadLink = document.getElementById('book-modal-download');
+
+        titleEl.textContent = title;
+        iframe.src = pdfUrl;
+        downloadLink.href = pdfUrl;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookModal(event) {
+        if (event && event.target !== event.currentTarget) return;
+        const modal = document.getElementById('book-modal');
+        const iframe = document.getElementById('book-modal-iframe');
+
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeBookModal();
+        }
+    });
+</script>
 
 @endsection
