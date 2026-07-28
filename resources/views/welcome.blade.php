@@ -443,7 +443,7 @@
                 </button>
             </div>
         </div>
-        <div id="network-container" class="relative w-full rounded-2xl border border-[#F0F0F0]/60 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden" style="height: 600px;">
+        <div id="network-container" class="relative w-full rounded-2xl border border-[#F0F0F0]/60 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden md:h-[600px] h-[400px]">
             <svg id="network-svg" class="w-full h-full cursor-grab active:cursor-grabbing" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
                 <defs>
                     <filter id="node-glow" x="-100%" y="-100%" width="300%" height="300%">
@@ -818,12 +818,18 @@
 
         if (!container || !svg) return;
 
-        let scale = 1;
+        const isMobile = window.innerWidth < 768;
+        let scale = isMobile ? 5 : 1;
         let pointX = 0;
         let pointY = 0;
         let isPanning = false;
         let startX = 0;
         let startY = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let hasMoved = false;
+        let initialPinchDistance = 0;
+        let initialScale = 1;
 
         function updateTransform() {
             svg.style.transform = `scale(${scale}) translate(${pointX}px, ${pointY}px)`;
@@ -831,7 +837,8 @@
         }
 
         function setZoom(newScale) {
-            scale = Math.min(Math.max(newScale, 0.5), 3);
+            const maxZoom = isMobile ? 6 : 3;
+            scale = Math.min(Math.max(newScale, 0.5), maxZoom);
             updateTransform();
         }
 
@@ -875,6 +882,59 @@
         svg.addEventListener('mouseleave', () => {
             isPanning = false;
             svg.style.cursor = 'grab';
+        });
+
+        svg.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                initialPinchDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                initialScale = scale;
+            } else if (e.touches.length === 1) {
+                isPanning = true;
+                startX = e.touches[0].clientX - pointX;
+                startY = e.touches[0].clientY - pointY;
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                hasMoved = false;
+            }
+        }, { passive: true });
+
+        svg.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const currentDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                const newScale = initialScale * (currentDistance / initialPinchDistance);
+                setZoom(newScale);
+            } else if (isPanning && e.touches.length === 1) {
+                const dx = e.touches[0].clientX - touchStartX;
+                const dy = e.touches[0].clientY - touchStartY;
+
+                if (!hasMoved && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+                    hasMoved = true;
+                }
+
+                if (hasMoved) {
+                    e.preventDefault();
+                    pointX = e.touches[0].clientX - startX;
+                    pointY = e.touches[0].clientY - startY;
+                    updateTransform();
+                }
+            }
+        }, { passive: false });
+
+        svg.addEventListener('touchend', () => {
+            isPanning = false;
+            hasMoved = false;
+        });
+
+        svg.addEventListener('touchcancel', () => {
+            isPanning = false;
+            hasMoved = false;
         });
 
         const nodes = document.querySelectorAll('.node-circle-inner');
@@ -1208,19 +1268,52 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-12 border-t border-[#EAEAEA]">
+<footer class="bg-white border-t border-[#EAEAEA]">
     <div class="max-w-[1200px] mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <img src="{{ asset('assets/Jerome_Edica.webp') }}" alt="Yora Jihun" class="w-8 h-8 rounded-full object-cover">
-                <span class="text-sm font-semibold text-black">Yora Jihun</span>
+        <div class="py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+                <div class="md:col-span-4 space-y-5">
+                    <h2 class="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-black leading-[0.9]">Yora Jihun</h2>
+                    <p class="text-sm text-[#8E8E93] leading-relaxed max-w-xs">Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.</p>
+                    <div class="flex items-center gap-2 text-[#16A34A]">
+                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono tracking-widest">STATUS::ACTIVE</span>
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#16A34A]"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Navigate</p>
+                    <ul class="space-y-3.5">
+                        <li><a href="#hero-section" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Home</a></li>
+                        <li><a href="{{ route('blog') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Blog</a></li>
+                        <li><a href="{{ route('experience') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Experience</a></li>
+                        <li><a href="{{ route('skills') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Skills</a></li>
+                        <li><a href="{{ route('projects') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Social</p>
+                    <ul class="space-y-3.5">
+                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Twitter</a></li>
+                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">GitHub</a></li>
+                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-4">
+                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Get in touch</p>
+                    <p class="text-sm text-[#8E8E93] leading-relaxed mb-5">Have a project in mind or just want to say hello? I'm always open to discussing new opportunities and ideas.</p>
+                    <a href="#hero-section" class="inline-flex items-center gap-2 text-sm font-medium text-[#16A34A] hover:text-emerald-700 transition-colors duration-200 no-underline">
+                        Start a conversation
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="flex items-center gap-8">
-                <a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Twitter</a>
-                <a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">GitHub</a>
-                <a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">LinkedIn</a>
-            </div>
-            <p class="text-sm text-[#8E8E93]">&copy; 2026 All rights reserved.</p>
+        </div>
+        <div class="border-t border-[#EAEAEA] py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+            <p class="text-xs text-[#8E8E93]">&copy; 2026 Yora Jihun. All rights reserved.</p>
+            <p class="text-xs text-[#8E8E93]">Designed & built with precision in Seoul, South Korea.</p>
         </div>
     </div>
 </footer>
