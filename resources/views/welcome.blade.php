@@ -325,7 +325,21 @@
                             <p class="text-[0.625rem] font-semibold tracking-[0.15em] uppercase text-[#8E8E93]">Junior High</p>
                         </div>
                         <p class="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase text-gray-400 mb-2">Rank 1</p>
-                        <p class="text-sm font-semibold text-gray-900">Top of Class</p>
+                        <p class="text-sm font-semibold text-gray-900 mb-3">Top of Class</p>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Featured in School Poster</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Computer Lab Leader</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">PBA All-Star League Jr High — Player of the Game</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="md:pl-8 md:pr-8 md:border-x md:border-[#F0F0F0]/60 mt-8 md:mt-0">
                         <div class="flex items-center gap-2 mb-4">
@@ -336,7 +350,13 @@
                             <p class="text-[0.625rem] font-semibold tracking-[0.15em] uppercase text-[#8E8E93]">Senior High School (STEM)</p>
                         </div>
                         <p class="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase text-gray-900 mb-2">With High Honors</p>
-                        <p class="text-sm text-gray-500 leading-relaxed">Graduated with High Honors under the STEM strand.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Graduated with High Honors under the STEM strand.</p>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Led development in National Science Technology Expo Team</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="md:pl-8 mt-8 md:mt-0">
                         <div class="flex items-center gap-2 mb-4">
@@ -344,7 +364,7 @@
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#16A34A]"></span>
                             </span>
-                            <p class="text-[0.625rem] font-semibold tracking-[0.15em] uppercase text-[#8E8E93]">Academic Achievements</p>
+                            <p class="text-[0.625rem] font-semibold tracking-[0.15em] uppercase text-[#8E8E93]">SHS — Academic High</p>
                         </div>
                         <ul class="space-y-2.5">
                             <li class="flex items-start gap-2.5">
@@ -365,6 +385,78 @@
             </div>
 
             <div class="px-8 py-8 md:px-12 md:py-10 border-t border-[#F0F0F0]/60">
+                <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-8">Achievements & Recognition</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div>
+                        <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">Recognition</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Best Speaker, SHS</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">6× Research Defended</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Quezon Best Research Presenter</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">National Science Technology Expo Team</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Teachers Council Presenter: AI in Education</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Solo Research: Flood Control</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Sci-Tech Benchmark & Newspaper</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
+                                <span class="text-sm text-gray-600">Overall Best Research</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">Academic Excellence</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">Entrepreneurship</span>
+                                <span class="text-sm font-semibold text-black">94%</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">PE and Health</span>
+                                <span class="text-sm font-semibold text-black">98%</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">Physics</span>
+                                <span class="text-sm font-semibold text-black">96%</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">Chemistry</span>
+                                <span class="text-sm font-semibold text-black">96%</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">CPAR</span>
+                                <span class="text-sm font-semibold text-black">96%</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span class="text-sm text-[#8E8E93]">Research</span>
+                                <span class="text-sm font-semibold text-black">96%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-8 py-8 md:px-12 md:py-10 border-t border-[#F0F0F0]/60">
                 <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-8">About Me</p>
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="flex-shrink-0 flex justify-center md:justify-start">
@@ -375,23 +467,31 @@
                         </div>
                     </div>
                     <div class="flex-1 min-w-0">
-                        <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-3">About Me</p>
                         <p class="text-base leading-[1.7] text-gray-500 mb-6">Self-taught engineer building elegant systems at the intersection of software, AI, and hardware. From facial recognition platforms to API gateways — a curated view of production-grade projects across Laravel, robotics, and aerospace.</p>
                         <div class="flex flex-wrap gap-2.5">
                             <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">
-                                <x-icon name="badge-lightbulb" class="w-3.5 h-3.5" />
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a7 7 0 00-7 7c0 2.5 1.5 4.5 3 6v2h10v-2c1.5-1.5 3-3.5 3-6a7 7 0 00-7-7z"></path>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6"></path>
+</svg>
                                 Problem Solver
                             </span>
                             <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">
-                                <x-icon name="badge-architecture" class="w-3.5 h-3.5" />
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75"></path>
+</svg>
                                 System Architect
                             </span>
                             <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">
-                                <x-icon name="badge-ai" class="w-3.5 h-3.5" />
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 11.715l.258 1.118-.258-1.118zm0 0L18 13.5l.259-1.785.258 1.118z"></path>
+</svg>
                                 AI Specialist
                             </span>
                             <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">
-                                <x-icon name="badge-learning" class="w-3.5 h-3.5" />
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 9.75c3.535 0 6.837.466 9.75 1.338V15"></path>
+</svg>
                                 Continuous Learner
                             </span>
                         </div>
@@ -1283,7 +1383,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="md:col-span-2">
+                <div class="md:col-span-4">
                     <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Navigate</p>
                     <ul class="space-y-3.5">
                         <li><a href="#hero-section" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Home</a></li>
@@ -1293,21 +1393,13 @@
                         <li><a href="{{ route('projects') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Projects</a></li>
                     </ul>
                 </div>
-                <div class="md:col-span-2">
+                <div class="md:col-span-4">
                     <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Social</p>
                     <ul class="space-y-3.5">
                         <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Twitter</a></li>
                         <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">GitHub</a></li>
                         <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">LinkedIn</a></li>
                     </ul>
-                </div>
-                <div class="md:col-span-4">
-                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Get in touch</p>
-                    <p class="text-sm text-[#8E8E93] leading-relaxed mb-5">Have a project in mind or just want to say hello? I'm always open to discussing new opportunities and ideas.</p>
-                    <a href="#hero-section" class="inline-flex items-center gap-2 text-sm font-medium text-[#16A34A] hover:text-emerald-700 transition-colors duration-200 no-underline">
-                        Start a conversation
-                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </a>
                 </div>
             </div>
         </div>
