@@ -177,6 +177,65 @@
         letter-spacing: 0.35em;
         text-shadow: 0 0 10px rgba(0,255,200,0.4);
     }
+
+    :fullscreen .cursor-dot,
+    :fullscreen .cursor-ring,
+    :-webkit-full-screen .cursor-dot,
+    :-webkit-full-screen .cursor-ring,
+    html:fullscreen .cursor-dot,
+    html:fullscreen .cursor-ring,
+    html:-webkit-full-screen .cursor-dot,
+    html:-webkit-full-screen .cursor-ring,
+    body:fullscreen .cursor-dot,
+    body:fullscreen .cursor-ring,
+    body:-webkit-full-screen .cursor-dot,
+    body:-webkit-full-screen .cursor-ring {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    :fullscreen *,
+    :-webkit-full-screen *,
+    html:fullscreen *,
+    html:-webkit-full-screen *,
+    body:fullscreen *,
+    body:-webkit-full-screen * {
+        cursor: auto !important;
+    }
+    :fullscreen #network-svg,
+    :fullscreen #network-svg *,
+    :-webkit-full-screen #network-svg,
+    :-webkit-full-screen #network-svg *,
+    html:fullscreen #network-svg,
+    html:fullscreen #network-svg *,
+    html:-webkit-full-screen #network-svg,
+    html:-webkit-full-screen #network-svg *,
+    body:fullscreen #network-svg,
+    body:fullscreen #network-svg *,
+    body:-webkit-full-screen #network-svg,
+    body:-webkit-full-screen #network-svg * {
+        cursor: auto !important;
+    }
+    :fullscreen .cursor-grab,
+    :fullscreen .cursor-grabbing,
+    :fullscreen .cursor-pointer,
+    :-webkit-full-screen .cursor-grab,
+    :-webkit-full-screen .cursor-grabbing,
+    :-webkit-full-screen .cursor-pointer,
+    html:fullscreen .cursor-grab,
+    html:fullscreen .cursor-grabbing,
+    html:fullscreen .cursor-pointer,
+    html:-webkit-full-screen .cursor-grab,
+    html:-webkit-full-screen .cursor-grabbing,
+    html:-webkit-full-screen .cursor-pointer,
+    body:fullscreen .cursor-grab,
+    body:fullscreen .cursor-grabbing,
+    body:fullscreen .cursor-pointer,
+    body:-webkit-full-screen .cursor-grab,
+    body:-webkit-full-screen .cursor-grabbing,
+    body:-webkit-full-screen .cursor-pointer {
+        cursor: auto !important;
+    }
 </style>
 
 <!-- Profile Overview -->
@@ -294,11 +353,11 @@
                             </li>
                             <li class="flex items-start gap-2.5">
                                 <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
-                                <span class="text-sm text-gray-600">97 Earth Science</span>
+                                <span class="text-sm text-gray-600">97% Earth Science</span>
                             </li>
                             <li class="flex items-start gap-2.5">
                                 <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
-                                <span class="text-sm text-gray-600">98 Media & Information Literacy</span>
+                                <span class="text-sm text-gray-600">98% Media & Information Literacy</span>
                             </li>
                         </ul>
                     </div>
@@ -434,6 +493,21 @@
                         #network-svg .node-label,
                         #network-svg .node-sublabel {
                             pointer-events: none;
+                        }
+
+                        :fullscreen #network-svg .node-group,
+                        :fullscreen #network-svg .node-circle-inner,
+                        :-webkit-full-screen #network-svg .node-group,
+                        :-webkit-full-screen #network-svg .node-circle-inner,
+                        html:fullscreen #network-svg .node-group,
+                        html:fullscreen #network-svg .node-circle-inner,
+                        html:-webkit-full-screen #network-svg .node-group,
+                        html:-webkit-full-screen #network-svg .node-circle-inner,
+                        body:fullscreen #network-svg .node-group,
+                        body:fullscreen #network-svg .node-circle-inner,
+                        body:-webkit-full-screen #network-svg .node-group,
+                        body:-webkit-full-screen #network-svg .node-circle-inner {
+                            cursor: pointer !important;
                         }
                         .node-circle-outer {
                             transition: all 0.3s ease;

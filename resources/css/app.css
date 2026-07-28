@@ -78,3 +78,16 @@
         cursor: auto !important;
     }
 }
+
+:fullscreen .cursor-dot,
+:fullscreen .cursor-ring,
+:-webkit-full-screen .cursor-dot,
+:-webkit-full-screen .cursor-ring {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+:fullscreen *,
+:-webkit-full-screen * {
+    cursor: none !important;
+}
