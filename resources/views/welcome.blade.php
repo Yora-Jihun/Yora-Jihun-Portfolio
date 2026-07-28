@@ -125,6 +125,13 @@
 </section>
 
 <style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+    }
     @keyframes scanline {
         0% { transform: translateY(-100%); }
         100% { transform: translateY(100vh); }
@@ -866,59 +873,39 @@
 </script>
 
 <!-- Featured Blog -->
+@if($featuredPosts->count() > 0)
 <section class="py-24 border-b border-[#EAEAEA]">
     <div class="max-w-[1200px] mx-auto px-6">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Featured Writing</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">From the blog</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <a href="{{ url('/blog') }}" class="group block">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
-                </div>
-                <div class="flex items-center gap-2 mb-3">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Design</p>
-                    <span class="text-[#EAEAEA]">·</span>
-                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">8 min read</p>
-                </div>
-                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">Designing Systems That Scale Without Losing Soul</h3>
-                <p class="text-sm text-gray-500 leading-relaxed mb-4">Most design systems start with the best intentions and end in rigid sprawl. Here's how to build components that give teams speed without sacrificing craft.</p>
-                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </div>
-            </a>
-            <a href="{{ url('/blog') }}" class="group block">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
-                </div>
-                <div class="flex items-center gap-2 mb-3">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Design</p>
-                    <span class="text-[#EAEAEA]">·</span>
-                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">6 min read</p>
-                </div>
-                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">The Case for Restraint in Interface Design</h3>
-                <p class="text-sm text-gray-500 leading-relaxed mb-4">Every pixel competes for attention. The strongest interfaces don't add more — they remove everything that doesn't serve the user.</p>
-                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </div>
-            </a>
-            <a href="{{ url('/blog') }}" class="group block">
-                <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
-                    <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
-                </div>
-                <div class="flex items-center gap-2 mb-3">
-                    <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">Engineering</p>
-                    <span class="text-[#EAEAEA]">·</span>
-                    <p class="text-[0.6875rem] font-medium text-[#8E8E93]">10 min read</p>
-                </div>
-                <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">Typography as Architecture</h3>
-                <p class="text-sm text-gray-500 leading-relaxed mb-4">Type isn't just decoration — it's the structure through which users read, scan, and understand. Good typography makes complex information feel simple.</p>
-                <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
-                    Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </div>
-            </a>
+            @foreach($featuredPosts as $post)
+                <a href="{{ url('/blog/' . $post->slug) }}" class="group block">
+                    <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
+                        @if($post->cover_image)
+                            <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                        @else
+                            <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
+                        @endif
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#16A34A]">{{ $post->category }}</p>
+                        <span class="text-[#EAEAEA]">·</span>
+                        <p class="text-[0.6875rem] font-medium text-[#8E8E93]">{{ $post->read_time }} min read</p>
+                        <span class="text-[#EAEAEA]">·</span>
+                        <p class="text-[0.6875rem] font-medium text-[#8E8E93]">{{ format_post_date($post->published_at) }}</p>
+                    </div>
+                    <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">{{ $post->title }}</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-4">{{ str($post->excerpt)->limit(120) }}</p>
+                    <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
+                        Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </div>
+                </a>
+            @endforeach
         </div>
     </div>
 </section>
+@endif
 
 <!-- Published Books -->
 <section class="py-24 border-b border-[#EAEAEA]">
@@ -1148,23 +1135,7 @@
     <div class="max-w-[640px] mx-auto px-6 text-center">
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-3">Let's build something refined together.</h2>
         <p class="text-sm text-[#8E8E93] mb-10">Tell me about your project. I usually reply within a day.</p>
-        <form class="text-left space-y-4" onsubmit="event.preventDefault(); alert('Message sent!');">
-            <div>
-                <label class="block text-xs font-medium text-gray-700 mb-1.5">Name</label>
-                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all" placeholder="Your name">
-            </div>
-            <div>
-                <label class="block text-xs font-medium text-gray-700 mb-1.5">Email</label>
-                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all" placeholder="you@example.com">
-            </div>
-            <div>
-                <label class="block text-xs font-medium text-gray-700 mb-1.5">Message</label>
-                <textarea rows="5" required class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all resize-none" placeholder="What are you working on?"></textarea>
-            </div>
-            <button type="submit" class="w-full inline-flex items-center justify-center bg-black text-white text-[0.6875rem] font-semibold tracking-[0.1em] uppercase py-[14px] px-7 rounded-[3px] hover:bg-[#333333] transition-colors duration-200 group">
-                Send message <svg class="arrow inline-block ml-2 w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-[3px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12L12 4"/><path d="M5 4h7v7"/></svg>
-            </button>
-        </form>
+        @livewire('contact-form')
     </div>
 </section>
 

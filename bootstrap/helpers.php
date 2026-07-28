@@ -8,12 +8,20 @@ if (!function_exists('format_post_date')) {
         $date = $date instanceof Carbon ? $date : Carbon::parse($date);
         $now = Carbon::now();
 
-        if ($date->diffInHours($now) < 24) {
-            return $date->diffForHumans([
-                'particles' => true,
-                'short' => false,
-                'syntax' => Carbon::DIFF_ABSOLUTE,
-            ]);
+        $diffInMinutes = intval($date->diffInMinutes($now));
+
+        if ($diffInMinutes < 60) {
+            if ($diffInMinutes > 0) {
+                return $diffInMinutes . ' min ago';
+            }
+
+            return 'Just now';
+        }
+
+        $diffInHours = intval($date->diffInHours($now));
+
+        if ($diffInHours < 24) {
+            return $diffInHours . ' hr ago';
         }
 
         return $date->format('M j, Y');

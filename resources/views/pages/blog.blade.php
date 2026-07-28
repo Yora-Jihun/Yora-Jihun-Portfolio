@@ -48,7 +48,7 @@
                             <p class="text-[0.6875rem] font-medium text-[#8E8E93]">{{ $featuredPost->read_time }} min read</p>
                         </div>
                         <h2 class="text-2xl md:text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-3 leading-[1.3] group-hover:text-[#16A34A] transition-colors duration-300">{{ $featuredPost->title }}</h2>
-                        <p class="text-sm text-gray-500 leading-relaxed mb-6">{{ $featuredPost->excerpt }}</p>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6">{{ str($featuredPost->excerpt)->limit(120) }}</p>
                         <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
                             Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                         </div>
@@ -92,7 +92,7 @@
                             <p class="text-[0.6875rem] font-medium text-[#8E8E93]">{{ format_post_date($post->published_at) }}</p>
                         </div>
                         <h3 class="text-base font-semibold tracking-[-0.01em] text-black mb-2 leading-[1.4] group-hover:text-[#16A34A] transition-colors duration-300">{{ $post->title }}</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed mb-4">{{ $post->excerpt }}</p>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">{{ str($post->excerpt)->limit(120) }}</p>
                         <div class="flex items-center text-[#16A34A] text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out">
                             Read article <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                         </div>
