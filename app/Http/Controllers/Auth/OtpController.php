@@ -61,17 +61,11 @@ class OtpController extends Controller
         $rateLimiterDecay = config('auth.otp_rate_limiter_decay', 300);
 
         if (RateLimiter::tooManyAttempts($key, $maxAttempts)) {
-            $availableIn = RateLimiter::availableIn($key);
-            $request->session()->put('rate_limit_expiry', now()->addSeconds($availableIn)->timestamp);
-            $request->session()->put('rate_limit_total_ms', $availableIn * 1000);
-
             $this->otpService->invalidateOtp($user);
-            $request->session()->put('rate_limit_error', "Too many verification attempts. Please try again in {$availableIn} seconds.");
+            $request->session()->put('rate_limit_error', 'Too many attempts. Please request a new code again.');
 
             return redirect()->route('admin.otp.verify', ['email' => $request->email]);
         }
-
-        RateLimiter::hit($key, $rateLimiterDecay);
 
         if ($this->otpService->verifyOtp($user, $request->otp)) {
             RateLimiter::clear($key);
@@ -84,12 +78,15 @@ class OtpController extends Controller
             return redirect()->intended('/admin/posts');
         }
 
+        // Only increment the rate limiter on failed attempts
+        RateLimiter::hit($key, $rateLimiterDecay);
+
         $attempts = $request->session()->get('verify_attempts', 0) + 1;
         $request->session()->put('verify_attempts', $attempts);
 
         if ($attempts >= $maxAttempts) {
             $this->otpService->invalidateOtp($user);
-            $request->session()->put('verify_failed', 'Verification failed. Too many attempts. Please request a new code.');
+            $request->session()->put('verify_failed', 'Too many attempts. Please request a new code again.');
 
             return redirect()->route('admin.otp.verify', ['email' => $request->email]);
         }
@@ -114,7 +111,10 @@ class OtpController extends Controller
             ], 404);
         }
 
-        // Check server-side cooldown
+        // Check server-side cooldown (session-based, fast feedback).
+        // Returns HTTP 200 with success=false so the browser does not
+        // log a 429 error for a normal "still in cooldown" response.
+        // The cooldown is still enforced server-side.
         $resendCooldownUntil = $request->session()->get('resend_cooldown_until');
         $resendCooldown = config('auth.otp_resend_cooldown', 60);
 
@@ -125,22 +125,49 @@ class OtpController extends Controller
                 'success' => false,
                 'message' => 'Please wait before resending OTP',
                 'remaining_seconds' => $remainingSeconds,
-            ], 429);
+            ]);
+        }
+
+        // Enforce a hard 60-second cooldown server-side using RateLimiter.
+        // This cannot be bypassed by clearing cookies or starting a new session.
+        $resendKey = 'otp-resend:' . $request->email;
+
+        if (RateLimiter::tooManyAttempts($resendKey, 1)) {
+            $remainingSeconds = RateLimiter::availableIn($resendKey);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Please wait before resending OTP',
+                'remaining_seconds' => $remainingSeconds,
+            ]);
         }
 
         try {
-            $otp = $this->otpService->generateOtp($user);
-            $this->otpService->sendOtp($user);
+            RateLimiter::hit($resendKey, $resendCooldown);
+            $otp = $this->otpService->sendOtp($user);
 
             $request->session()->put('resend_cooldown_until', now()->addSeconds($resendCooldown)->timestamp);
+            $request->session()->put('otp_expiry', $otp->expires_at->timestamp);
+            $request->session()->put('otp_total_ms', config('auth.otp_expiry', 5) * 60 * 1000);
             $request->session()->forget('verify_attempts');
             $request->session()->forget('verify_failed');
             $request->session()->forget('rate_limit_error');
+            $request->session()->forget('rate_limit_expiry');
+            $request->session()->forget('rate_limit_total_ms');
+
+            // Clear the rate limiter counter when a new OTP is sent
+            RateLimiter::clear('otp-verify:' . $request->email);
+
+            // Flash a success status so it appears in the same green
+            // success box as the initial "OTP sent" message after reload.
+            $request->session()->flash('status', 'OTP resent successfully. Please check your email.');
 
             return response()->json([
                 'success' => true,
                 'message' => 'OTP resent successfully',
                 'cooldown_until' => now()->addSeconds($resendCooldown)->timestamp,
+                'otp_expiry' => $otp->expires_at->timestamp,
+                'otp_total_ms' => config('auth.otp_expiry', 5) * 60 * 1000,
             ]);
         } catch (\Exception $e) {
             return response()->json([

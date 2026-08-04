@@ -114,4 +114,12 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    'otp_expiry' => env('OTP_EXPIRY_MINUTES', 5),
+
+    'max_verify_attempts' => env('MAX_VERIFY_ATTEMPTS', 5),
+
+    'otp_resend_cooldown' => env('OTP_RESEND_COOLDOWN_SECONDS', 60),
+
+    'otp_rate_limiter_decay' => env('OTP_RATE_LIMITER_DECAY_SECONDS', 300),
+
 ];

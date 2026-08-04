@@ -35,13 +35,23 @@ class PostController extends Controller
             'read_time' => 'integer|min:1',
             'cover_image' => 'nullable|image|max:2048',
             'featured' => 'boolean',
+            'pin_post' => 'boolean',
         ]);
+
+        if ($request->has('featured') && Post::where('featured', true)->count() >= 3) {
+            return back()->withErrors(['featured' => 'You can only have up to 3 featured posts.'])->withInput();
+        }
+
+        if ($request->has('pin_post') && Post::where('pin_post', true)->count() >= 1) {
+            return back()->withErrors(['pin_post' => 'You can only pin 1 post to the homepage.'])->withInput();
+        }
 
         $data['slug'] = Str::slug($data['title']);
         $data['user_id'] = auth()->id();
         $data['is_published'] = true;
         $data['published_at'] = now();
         $data['featured'] = $request->has('featured');
+        $data['pin_post'] = $request->has('pin_post');
 
         if ($request->hasFile('cover_image')) {
             $data['cover_image'] = $request->file('cover_image')->store('post-covers', 'public');
@@ -67,7 +77,16 @@ class PostController extends Controller
             'read_time' => 'integer|min:1',
             'cover_image' => 'nullable|image|max:2048',
             'featured' => 'boolean',
+            'pin_post' => 'boolean',
         ]);
+
+        if ($request->has('featured') && !$post->featured && Post::where('featured', true)->where('id', '!=', $post->id)->count() >= 3) {
+            return back()->withErrors(['featured' => 'You can only have up to 3 featured posts.'])->withInput();
+        }
+
+        if ($request->has('pin_post') && !$post->pin_post && Post::where('pin_post', true)->where('id', '!=', $post->id)->count() >= 1) {
+            return back()->withErrors(['pin_post' => 'You can only pin 1 post to the homepage.'])->withInput();
+        }
 
         if ($data['title'] !== $post->title) {
             $data['slug'] = Str::slug($data['title']);
@@ -82,6 +101,7 @@ class PostController extends Controller
         $data['is_published'] = true;
         $data['published_at'] = now();
         $data['featured'] = $request->has('featured');
+        $data['pin_post'] = $request->has('pin_post');
 
         $post->update($data);
 

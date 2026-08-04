@@ -18,7 +18,7 @@ class HomeController extends Controller
             ->take(3)
             ->get();
 
-        return view('welcome', compact('featuredPosts'));
+        return view('pages.home', compact('featuredPosts'));
     }
 
     public function contact(Request $request)

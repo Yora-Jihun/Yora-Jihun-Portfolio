@@ -18,12 +18,15 @@ class Post extends Model
         'is_published',
         'published_at',
         'featured',
+        'pin_post',
         'user_id',
     ];
 
     protected $casts = [
         'is_published' => 'boolean',
         'published_at' => 'datetime',
+        'featured' => 'boolean',
+        'pin_post' => 'boolean',
     ];
 
     public function author()
@@ -41,5 +44,10 @@ class Post extends Model
     public function scopeFeatured(Builder $query): Builder
     {
         return $query->where('featured', true);
+    }
+
+    public function scopePinned(Builder $query): Builder
+    {
+        return $query->where('pin_post', true);
     }
 }

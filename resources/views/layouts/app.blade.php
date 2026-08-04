@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Yora Jihun - Portfolio">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Yora Jihun</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
@@ -43,6 +44,9 @@
     <main class="main-content pt-16">
         @yield('content')
     </main>
+
+    @include('components.footer')
+
     @livewireScripts
     <script>
         (function() {

@@ -13,7 +13,7 @@ class BlogController extends Controller
 
         $featuredPost = Post::published()
             ->with('author')
-            ->featured()
+            ->pinned()
             ->latest('published_at')
             ->first();
 

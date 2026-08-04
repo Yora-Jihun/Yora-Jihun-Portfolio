@@ -93,13 +93,20 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Category</label>
-                                <select name="category" class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all">
-                                    <option value="Technology" {{ old('category', $post->category) === 'Technology' ? 'selected' : '' }}>Technology</option>
-                                    <option value="Design" {{ old('category', $post->category) === 'Design' ? 'selected' : '' }}>Design</option>
-                                    <option value="Product" {{ old('category', $post->category) === 'Product' ? 'selected' : '' }}>Product</option>
-                                    <option value="Development" {{ old('category', $post->category) === 'Development' ? 'selected' : '' }}>Development</option>
-                                    <option value="Lifestyle" {{ old('category', $post->category) === 'Lifestyle' ? 'selected' : '' }}>Lifestyle</option>
-                                </select>
+                                <div class="relative">
+                                    <select name="category" class="w-full px-4 py-3 pr-10 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all appearance-none">
+                                        <option value="Technology" {{ old('category', $post->category) === 'Technology' ? 'selected' : '' }}>Technology</option>
+                                        <option value="Design" {{ old('category', $post->category) === 'Design' ? 'selected' : '' }}>Design</option>
+                                        <option value="Product" {{ old('category', $post->category) === 'Product' ? 'selected' : '' }}>Product</option>
+                                        <option value="Development" {{ old('category', $post->category) === 'Development' ? 'selected' : '' }}>Development</option>
+                                        <option value="Lifestyle" {{ old('category', $post->category) === 'Lifestyle' ? 'selected' : '' }}>Lifestyle</option>
+                                    </select>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-500">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Read Time (min)</label>
@@ -118,9 +125,19 @@
                         </div>
 
                         <div class="flex items-center gap-4 pt-2">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="checkbox" name="featured" value="1" {{ old('featured', $post->featured) ? 'checked' : '' }} class="w-4 h-4 rounded border-[#E5E7EB] text-[#16A34A] focus:ring-[#16A34A]">
-                                <span class="text-sm text-gray-700">Featured post</span>
+                            <label class="flex items-center cursor-pointer select-none">
+                                <input type="checkbox" name="featured" value="1" {{ old('featured', $post->featured) ? 'checked' : '' }} class="sr-only peer" onchange="var dot=this.nextElementSibling.querySelector('.toggle-dot'); if(dot){dot.style.transform=this.checked?'translateX(20px)':'translateX(0)';}">
+                                <span class="relative inline-flex items-center h-6 w-11 rounded-full bg-gray-200 peer-checked:bg-[#16A34A] transition-colors duration-200 ease-out">
+                                    <span class="toggle-dot absolute left-0.5 top-0.5 inline-block h-5 w-5 rounded-full bg-white shadow-sm transform transition-transform duration-200 ease-out"></span>
+                                </span>
+                                <span class="ml-3 text-sm text-gray-700">Featured post</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer select-none">
+                                <input type="checkbox" name="pin_post" value="1" {{ old('pin_post', $post->pin_post) ? 'checked' : '' }} class="sr-only peer" onchange="var dot=this.nextElementSibling.querySelector('.toggle-dot'); if(dot){dot.style.transform=this.checked?'translateX(20px)':'translateX(0)';}">
+                                <span class="relative inline-flex items-center h-6 w-11 rounded-full bg-gray-200 peer-checked:bg-[#16A34A] transition-colors duration-200 ease-out">
+                                    <span class="toggle-dot absolute left-0.5 top-0.5 inline-block h-5 w-5 rounded-full bg-white shadow-sm transform transition-transform duration-200 ease-out"></span>
+                                </span>
+                                <span class="ml-3 text-sm text-gray-700">Pin to homepage</span>
                             </label>
                         </div>
                     </div>
@@ -197,6 +214,13 @@
                     stopCursor();
                 } else {
                     startCursor();
+                }
+            });
+
+            document.querySelectorAll('input[name="featured"], input[name="pin_post"]').forEach(function(toggle) {
+                var dot = toggle.nextElementSibling.querySelector('.toggle-dot');
+                if (dot) {
+                    dot.style.transform = toggle.checked ? 'translateX(20px)' : 'translateX(0)';
                 }
             });
         })();

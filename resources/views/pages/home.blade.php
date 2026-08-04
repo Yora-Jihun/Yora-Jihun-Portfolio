@@ -366,7 +366,7 @@
                             </span>
                             <p class="text-[0.625rem] font-semibold tracking-[0.15em] uppercase text-[#8E8E93]">SHS — Academic High</p>
                         </div>
-                        <ul class="space-y-2.5">
+                        <ul class="space-y-2.5"> 
                             <li class="flex items-start gap-2.5">
                                 <x-icon name="check" class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" />
                                 <span class="text-sm text-gray-600">99% Work Immersion</span>
@@ -1366,49 +1366,6 @@
         @livewire('contact-form')
     </div>
 </section>
-
-<!-- Footer -->
-<footer class="bg-white border-t border-[#EAEAEA]">
-    <div class="max-w-[1200px] mx-auto px-6">
-        <div class="py-16 md:py-24">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
-                <div class="md:col-span-4 space-y-5">
-                    <h2 class="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-black leading-[0.9]">Yora Jihun</h2>
-                    <p class="text-sm text-[#8E8E93] leading-relaxed max-w-xs">Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.</p>
-                    <div class="flex items-center gap-2 text-[#16A34A]">
-                        <span class="text-[0.5625rem] md:text-[0.6875rem] font-mono tracking-widest">STATUS::ACTIVE</span>
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#16A34A]"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="md:col-span-4">
-                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Navigate</p>
-                    <ul class="space-y-3.5">
-                        <li><a href="#hero-section" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Home</a></li>
-                        <li><a href="{{ route('blog') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Blog</a></li>
-                        <li><a href="{{ route('experience') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Experience</a></li>
-                        <li><a href="{{ route('skills') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Skills</a></li>
-                        <li><a href="{{ route('projects') }}" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="md:col-span-4">
-                    <p class="text-[0.5625rem] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-5">Social</p>
-                    <ul class="space-y-3.5">
-                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">Twitter</a></li>
-                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">GitHub</a></li>
-                        <li><a href="#" class="text-sm text-[#8E8E93] no-underline hover:text-black transition-colors duration-200">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-[#EAEAEA] py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-            <p class="text-xs text-[#8E8E93]">&copy; 2026 Yora Jihun. All rights reserved.</p>
-            <p class="text-xs text-[#8E8E93]">Designed & built with precision in Seoul, South Korea.</p>
-        </div>
-    </div>
-</footer>
 
 <div id="book-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm items-center justify-center p-4 md:p-8" onclick="closeBookModal(event)">
     <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden" onclick="event.stopPropagation()">

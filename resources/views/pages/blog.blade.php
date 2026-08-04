@@ -41,7 +41,7 @@
                     </div>
                     <div class="lg:col-span-5 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="inline-block text-[0.625rem] font-semibold tracking-[0.08em] uppercase text-[#16A34A] bg-emerald-50 px-2.5 py-1 rounded-full">Featured</span>
+                            <span class="inline-block text-[0.625rem] font-semibold tracking-[0.08em] uppercase text-[#16A34A] bg-emerald-50 px-2.5 py-1 rounded-full">Pinned</span>
                             <span class="text-[#EAEAEA]">·</span>
                             <p class="text-[0.6875rem] font-medium tracking-[0.1em] uppercase text-[#8E8E93]">{{ format_post_date($featuredPost->published_at) }}</p>
                             <span class="text-[#EAEAEA]">·</span>
