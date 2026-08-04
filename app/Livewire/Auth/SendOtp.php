@@ -38,8 +38,6 @@ class SendOtp extends Component
             return;
         }
 
-        // Enforce a hard 60-second cooldown server-side so a hacker cannot
-        // spam the initial send to bypass the resend cooldown.
         $resendKey = 'otp-resend:'.$this->email;
 
         if (RateLimiter::tooManyAttempts($resendKey, 1)) {
@@ -57,10 +55,8 @@ class SendOtp extends Component
         $otpService->invalidateOtp($user);
         $otp = $otpService->sendOtp($user);
 
-        // Clear the verification rate limiter counter when a new OTP is sent
         RateLimiter::clear('otp-verify:'.$this->email);
 
-        // Clear any stale verification session state from a previous attempt
         session()->forget([
             'verify_attempts',
             'verify_failed',

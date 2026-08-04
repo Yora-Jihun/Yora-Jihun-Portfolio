@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Blog Header -->
-<section class="pt-24 pb-20 border-b border-[#EAEAEA] relative overflow-hidden">
+<section class="pt-24 pb-20 border-b border-[#EAEAEA] relative overflow-hidden reveal">
     <div class="max-w-[1200px] mx-auto px-6 relative z-10">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-6">Blog</p>
         <h1 class="text-[3rem] md:text-[3.5rem] font-semibold tracking-[-0.03em] text-black mb-6 leading-[1.1] max-w-[900px]">Your Passion Will Lead You to New Discoveries</h1>
@@ -26,7 +26,7 @@
 
 <!-- Featured Post -->
 @if($featuredPost)
-    <section class="py-16 border-b border-[#EAEAEA]">
+    <section class="py-16 border-b border-[#EAEAEA] reveal">
         <div class="max-w-[1200px] mx-auto px-6">
             <a href="{{ url('/blog/' . $featuredPost->slug) }}" class="group block">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -60,7 +60,7 @@
 @endif
 
 <!-- Recent Posts -->
-<section class="py-24">
+<section class="py-24 reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <div class="flex items-center justify-between mb-10">
             <h2 class="text-[1.5rem] font-semibold tracking-[-0.02em] text-black">Recent posts</h2>

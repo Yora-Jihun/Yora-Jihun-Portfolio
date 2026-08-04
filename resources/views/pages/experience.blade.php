@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Experience Header -->
-<section class="pt-24 pb-20 border-b border-[#EAEAEA] relative overflow-hidden">
+<section class="pt-24 pb-20 border-b border-[#EAEAEA] relative overflow-hidden reveal">
     <div class="max-w-[1200px] mx-auto px-6 relative z-10">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-6">Experience</p>
         <h1 class="text-[3rem] md:text-[3.5rem] font-semibold tracking-[-0.03em] text-black mb-6 leading-[1.1] max-w-[900px]">7 Years of Building, Leading, and Learning</h1>
@@ -25,7 +25,7 @@
 </section>
 
 <!-- Formal Experience -->
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <div class="flex items-center gap-3 mb-12">
             <p class="text-xs font-semibold tracking-[0.1em] uppercase text-[#8E8E93]">Formal Experience</p>
@@ -85,7 +85,7 @@
 </section>
 
 <!-- Non-Formal Experience -->
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <div class="flex items-center gap-3 mb-12">
             <p class="text-xs font-semibold tracking-[0.1em] uppercase text-[#8E8E93]">Non-Formal / Freelance</p>
@@ -157,7 +157,7 @@
 </section>
 
 <!-- Skills by Experience -->
-<section class="py-24">
+<section class="py-24 reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <div class="flex items-center gap-3 mb-12">
             <p class="text-xs font-semibold tracking-[0.1em] uppercase text-[#8E8E93]">Core Competencies</p>

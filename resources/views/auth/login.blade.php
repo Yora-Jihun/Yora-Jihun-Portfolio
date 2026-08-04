@@ -1,8 +1,7 @@
-cls
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen flex items-center justify-center">
+<div class="min-h-screen flex items-center justify-center reveal">
     <div class="w-full max-w-md px-6">
         <div class="text-center mb-8">
             <a href="{{ url('/') }}" class="text-2xl font-semibold text-black">YJ<span class="text-emerald-500">.</span></a>

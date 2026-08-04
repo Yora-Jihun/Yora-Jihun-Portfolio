@@ -47,8 +47,6 @@ class LoginController extends Controller
             ]);
         }
 
-        // Enforce a hard 60-second cooldown server-side so a hacker cannot
-        // spam the initial send to bypass the resend cooldown.
         $resendKey = 'otp-resend:' . $request->email;
 
         if (RateLimiter::tooManyAttempts($resendKey, 1)) {
@@ -65,10 +63,8 @@ class LoginController extends Controller
         $this->otpService->invalidateOtp($user);
         $otp = $this->otpService->sendOtp($user);
 
-        // Clear the verification rate limiter counter when a new OTP is sent
         RateLimiter::clear('otp-verify:' . $request->email);
 
-        // Clear any stale verification session state from a previous attempt
         $request->session()->forget('verify_attempts');
         $request->session()->forget('verify_failed');
         $request->session()->forget('rate_limit_error');

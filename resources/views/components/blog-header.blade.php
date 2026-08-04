@@ -1,4 +1,4 @@
-<div class="py-8 md:py-12 lg:py-16 border-b border-[#EAEAEA]">
+<div class="py-8 md:py-12 lg:py-16 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <a href="{{ url('/blog') }}" class="inline-flex items-center text-sm text-[#8E8E93] hover:text-black transition-all duration-200 mb-6 md:mb-8 no-underline group">
             <svg class="w-4 h-4 mr-2 transition-transform duration-200 group-hover:-translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/></svg>

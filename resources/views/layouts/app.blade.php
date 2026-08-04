@@ -9,6 +9,32 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
     <style>
+        .page-enter {
+            animation: pageFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        @keyframes pageFadeIn {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        @media (prefers-reduced-motion: reduce) {
+            .page-enter { animation: none; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
         :fullscreen .cursor-dot,
         :fullscreen .cursor-ring,
         :-webkit-full-screen .cursor-dot,
@@ -41,7 +67,7 @@
     @yield('preload')
     @include('components.navbar')
 
-    <main class="main-content pt-16">
+    <main class="main-content pt-16 page-enter">
         @yield('content')
     </main>
 
@@ -113,6 +139,21 @@
                 } else {
                     startCursor();
                 }
+            });
+        })();
+
+        (function() {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
             });
         })();
     </script>

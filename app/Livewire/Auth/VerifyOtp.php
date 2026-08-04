@@ -82,7 +82,6 @@ class VerifyOtp extends Component
             return;
         }
 
-        // Hard server-side rate limiter check (cannot be bypassed)
         $key = 'otp-verify:'.$this->email;
         $rateLimiterDecay = (int) config('auth.otp_rate_limiter_decay', 300);
 
@@ -103,7 +102,6 @@ class VerifyOtp extends Component
             return redirect()->intended('/admin/posts');
         }
 
-        // Only increment the rate limiter on failed attempts
         RateLimiter::hit($key, $rateLimiterDecay);
 
         $this->verifyAttempts++;
@@ -136,7 +134,6 @@ class VerifyOtp extends Component
             return;
         }
 
-        // Hard 60-second server-side cooldown (cannot be bypassed)
         $resendKey = 'otp-resend:'.$this->email;
         $resendCooldown = (int) config('auth.otp_resend_cooldown', 60);
 

@@ -6,7 +6,6 @@
 
 @section('content')
 
-<!-- Hero / Landing -->
 <section id="hero-section" class="relative min-h-screen px-6 overflow-hidden flex items-start justify-center pt-0">
     <div class="absolute inset-0 pointer-events-none"></div>
 
@@ -238,8 +237,7 @@
     }
 </style>
 
-<!-- Profile Overview -->
-<section class="pt-0 pb-24 border-b border-[#EAEAEA]">
+<section class="pt-0 pb-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1100px] mx-auto px-6 relative z-10 mb-0 md:mb-2">
         <div class="bg-white rounded-2xl border border-[#EAEAEA] overflow-hidden">
 
@@ -503,8 +501,7 @@
     </div>
 </section>
 
-<!-- Bottom Information Strip -->
-<section class="border-t border-[#E5E7EB]">
+<section class="border-t border-[#E5E7EB] reveal">
     <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4">
         <div class="p-10 border-r border-[#E5E7EB]">
             <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-2">Clean Architecture</p>
@@ -525,8 +522,7 @@
     </div>
 </section>
 
-<!-- Connections -->
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1400px] mx-auto px-6">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Connections</p>
         <div class="flex items-center justify-between mb-8">
@@ -718,10 +714,8 @@
                     </style>
                 </defs>
 
-                <!-- Circuit grid background -->
                 <rect width="1200" height="600" fill="url(#circuit-grid)" opacity="0.6"/>
 
-                <!-- Connection traces -->
                 <g class="traces">
                     <path class="trace-path trace-animated" d="M 600 300 L 600 60"/>
                     <path class="trace-path trace-animated" d="M 600 300 L 673 300 L 673 77"/>
@@ -745,7 +739,6 @@
                     <path class="trace-path trace-animated" d="M 600 300 L 527 300 L 527 77"/>
                 </g>
 
-                <!-- Central CPU -->
                 <g class="cpu-node" filter="url(#node-glow)" style="cursor: default;">
                     <rect x="540" y="240" width="120" height="120" rx="12" fill="#16A34A" opacity="0.08"/>
                     <rect x="550" y="250" width="100" height="100" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2.5"/>
@@ -754,7 +747,6 @@
                     <text x="600" y="310" text-anchor="middle" class="node-label" font-size="11" font-weight="500" fill="#6B7280">JIHUN</text>
                 </g>
 
-                <!-- Partner nodes -->
                 <g class="partner-nodes">
                     <g class="node-group" data-name="Maria Santos" data-desc="ABS-CBN - Media and broadcasting">
                         <circle cx="600" cy="60" r="28" fill="#76B900" opacity="0.1" class="node-circle-outer"/>
@@ -1102,7 +1094,7 @@
 
 <!-- Featured Blog -->
 @if($featuredPosts->count() > 0)
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[1200px] mx-auto px-6">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Featured Writing</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">From the blog</h2>
@@ -1136,7 +1128,7 @@
 @endif
 
 <!-- Published Books -->
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[960px] mx-auto px-6">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-12">Published Work</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-10">Books</h2>
@@ -1191,7 +1183,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="py-24 border-b border-[#EAEAEA] overflow-hidden">
+<section class="py-24 border-b border-[#EAEAEA] overflow-hidden reveal">
     <div class="max-w-[1200px] mx-auto px-6 mb-12">
         <p class="text-[0.6875rem] font-semibold tracking-[0.2em] uppercase text-[#8E8E93] mb-4">Testimonials</p>
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black">What people say</h2>
@@ -1359,7 +1351,7 @@
 </section>
 
 <!-- CTA -->
-<section class="py-24 border-b border-[#EAEAEA]">
+<section class="py-24 border-b border-[#EAEAEA] reveal">
     <div class="max-w-[640px] mx-auto px-6 text-center">
         <h2 class="text-[1.875rem] font-semibold tracking-[-0.02em] text-black mb-3">Let's build something refined together.</h2>
         <p class="text-sm text-[#8E8E93] mb-10">Tell me about your project. I usually reply within a day.</p>

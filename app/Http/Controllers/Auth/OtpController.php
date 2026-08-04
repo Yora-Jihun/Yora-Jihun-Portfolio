@@ -78,7 +78,6 @@ class OtpController extends Controller
             return redirect()->intended('/admin/posts');
         }
 
-        // Only increment the rate limiter on failed attempts
         RateLimiter::hit($key, $rateLimiterDecay);
 
         $attempts = $request->session()->get('verify_attempts', 0) + 1;
@@ -111,10 +110,6 @@ class OtpController extends Controller
             ], 404);
         }
 
-        // Check server-side cooldown (session-based, fast feedback).
-        // Returns HTTP 200 with success=false so the browser does not
-        // log a 429 error for a normal "still in cooldown" response.
-        // The cooldown is still enforced server-side.
         $resendCooldownUntil = $request->session()->get('resend_cooldown_until');
         $resendCooldown = config('auth.otp_resend_cooldown', 60);
 
@@ -128,8 +123,6 @@ class OtpController extends Controller
             ]);
         }
 
-        // Enforce a hard 60-second cooldown server-side using RateLimiter.
-        // This cannot be bypassed by clearing cookies or starting a new session.
         $resendKey = 'otp-resend:' . $request->email;
 
         if (RateLimiter::tooManyAttempts($resendKey, 1)) {
@@ -155,11 +148,8 @@ class OtpController extends Controller
             $request->session()->forget('rate_limit_expiry');
             $request->session()->forget('rate_limit_total_ms');
 
-            // Clear the rate limiter counter when a new OTP is sent
             RateLimiter::clear('otp-verify:' . $request->email);
 
-            // Flash a success status so it appears in the same green
-            // success box as the initial "OTP sent" message after reload.
             $request->session()->flash('status', 'OTP resent successfully. Please check your email.');
 
             return response()->json([

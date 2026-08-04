@@ -15,7 +15,7 @@
 ])
 
 <!-- Article Content -->
-<section class="border-t border-[#EAEAEA]">
+<section class="border-t border-[#EAEAEA] reveal">
     <div class="max-w-[1200px] mx-auto px-6 py-12 md:py-16">
         <article class="max-w-[740px] mx-auto">
             @if($post->cover_image)
