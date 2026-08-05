@@ -17,6 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('author')->latest()->paginate(20);
+
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -54,7 +55,7 @@ class PostController extends Controller
         $data['pin_post'] = $request->has('pin_post');
 
         if ($request->hasFile('cover_image')) {
-            $data['cover_image'] = $request->file('cover_image')->store('post-covers', 'public');
+            $data['cover_image'] = $request->file('cover_image')->store('post-covers');
         }
 
         Post::create($data);
@@ -80,11 +81,11 @@ class PostController extends Controller
             'pin_post' => 'boolean',
         ]);
 
-        if ($request->has('featured') && !$post->featured && Post::where('featured', true)->where('id', '!=', $post->id)->count() >= 3) {
+        if ($request->has('featured') && ! $post->featured && Post::where('featured', true)->where('id', '!=', $post->id)->count() >= 3) {
             return back()->withErrors(['featured' => 'You can only have up to 3 featured posts.'])->withInput();
         }
 
-        if ($request->has('pin_post') && !$post->pin_post && Post::where('pin_post', true)->where('id', '!=', $post->id)->count() >= 1) {
+        if ($request->has('pin_post') && ! $post->pin_post && Post::where('pin_post', true)->where('id', '!=', $post->id)->count() >= 1) {
             return back()->withErrors(['pin_post' => 'You can only pin 1 post to the homepage.'])->withInput();
         }
 
@@ -93,7 +94,7 @@ class PostController extends Controller
         }
 
         if ($request->hasFile('cover_image')) {
-            $data['cover_image'] = $request->file('cover_image')->store('post-covers', 'public');
+            $data['cover_image'] = $request->file('cover_image')->store('post-covers');
         } else {
             $data['cover_image'] = $post->cover_image;
         }

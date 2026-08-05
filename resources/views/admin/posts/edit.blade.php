@@ -116,7 +116,7 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Cover Image</label>
                                 @if($post->cover_image)
                                     <div class="mb-3">
-                                        <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full max-w-xs h-32 object-cover rounded-lg border border-[#EAEAEA]">
+                                        <img src="{{ \Storage::url($post->cover_image) }}" alt="{{ $post->title }}" class="w-full max-w-xs h-32 object-cover rounded-lg border border-[#EAEAEA]">
                                     </div>
                                 @endif
                                 <input type="file" name="cover_image" accept="image/*" class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white text-sm focus:outline-none focus:border-[#16A34A] focus:ring-1 focus:ring-[#16A34A] transition-all">

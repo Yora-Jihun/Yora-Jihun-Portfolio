@@ -20,7 +20,7 @@
         <article class="max-w-[740px] mx-auto">
             @if($post->cover_image)
                 <div class="mb-10">
-                    <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-auto cursor-pointer" id="cover-image-full">
+                    <img src="{{ \Storage::url($post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-auto cursor-pointer" id="cover-image-full">
                 </div>
             @endif
             <div class="prose prose-gray max-w-none">

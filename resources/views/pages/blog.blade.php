@@ -33,7 +33,7 @@
                     <div class="lg:col-span-7">
                         <div class="w-full aspect-[16/9] lg:aspect-[16/10] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center">
                             @if($featuredPost->cover_image)
-                                <img src="{{ asset('storage/' . $featuredPost->cover_image) }}" alt="{{ $featuredPost->title }}" class="w-full h-full object-cover">
+                                <img src="{{ \Storage::url($featuredPost->cover_image) }}" alt="{{ $featuredPost->title }}" class="w-full h-full object-cover">
                             @else
                                 <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                             @endif
@@ -79,7 +79,7 @@
                     <a href="{{ url('/blog/' . $post->slug) }}" class="group block">
                         <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
                             @if($post->cover_image)
-                                <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                                <img src="{{ \Storage::url($post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
                             @else
                                 <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                             @endif

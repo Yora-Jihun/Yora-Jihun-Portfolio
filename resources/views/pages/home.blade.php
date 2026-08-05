@@ -495,6 +495,25 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-10 pt-8 border-t border-[#F0F0F0]/60 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-3">Languages</p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">Tagalog</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">Ilocano</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">English</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">Korean</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[0.5625rem] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-3">Ethnicity</p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">Half Filipino</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-xs font-semibold text-gray-600 tracking-wide hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-200 ease-out cursor-default">Half Spanish</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -1103,7 +1122,7 @@
                 <a href="{{ url('/blog/' . $post->slug) }}" class="group block">
                     <div class="w-full aspect-[16/9] bg-[#F3F4F6] rounded-2xl overflow-hidden flex items-center justify-center mb-5">
                         @if($post->cover_image)
-                            <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                            <img src="{{ \Storage::url($post->cover_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
                         @else
                             <span class="text-[0.625rem] font-semibold tracking-[0.05em] uppercase text-[#9CA3AF]">Image</span>
                         @endif
