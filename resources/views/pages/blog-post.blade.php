@@ -24,16 +24,7 @@
                 </div>
             @endif
             <div class="prose prose-gray max-w-none">
-                @php
-                    $paragraphs = explode("\n\n", $post->body);
-                @endphp
-                @foreach($paragraphs as $paragraph)
-                    @if(trim($paragraph))
-                        <p class="text-[1.0625rem] text-gray-700 leading-[1.85] mb-7 text-justify">
-                            {{ trim($paragraph) }}
-                        </p>
-                    @endif
-                @endforeach
+                {!! \Illuminate\Support\Str::markdown($post->body) !!}
             </div>
 
             <div class="mt-16 pt-8 border-t border-[#EAEAEA]">
