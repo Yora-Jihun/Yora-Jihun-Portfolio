@@ -1,0 +1,22 @@
+
+ INFO Server running on [http://127.0.0.1:8000]. 
+
+ Press Ctrl+C to stop the server
+
+ 2026-08-06 08:26:45 /blog .. ~ 5s
+ 2026-08-06 08:27:48 /blog .. ~ 0.71ms
+ 2026-08-06 08:27:59 /blog .. ~ 1.44ms
+ 2026-08-06 08:29:08 /blog/update-from-local .. ~ 1s
+ 2026-08-06 09:02:52 /blog .. ~ 1s
+ 2026-08-06 09:03:10 /blog/update-from-local .. ~ 1.21ms
+ 2026-08-06 09:03:10 /livewire-41864fcf/livewire.js .. ~ 1s
+ 2026-08-06 09:03:10 /build/assets/app-3bPQmTPy.css .. ~ 1s
+ 2026-08-06 09:03:10 /build/assets/app-B1r5ZMKE.js .. ~ 1s
+ 2026-08-06 09:03:10 /assets/Jerome_Edica.webp .. ~ 1s
+ 2026-08-06 09:03:11 /storage/post-covers/uKvNebt9gTWEfuhnkE73sqaJclFbw0MndQimtXPl.png .. ~ 9.53ms
+ 2026-08-06 09:03:11 .. ~ 8s
+ 2026-08-06 09:44:34 /blog/update-from-local .. ~ 529.66ms
+ 2026-08-06 09:44:34 /build/assets/app-3bPQmTPy.css .. ~ 0.67ms
+ 2026-08-06 09:44:34 /build/assets/app-B1r5ZMKE.js .. ~ 3.31ms
+ 2026-08-06 09:44:34 /assets/Jerome_Edica.webp .. ~ 4.83ms
+ 2026-08-06 09:44:34 /livewire-41864fcf/livewire.js .. ~ 0.28ms

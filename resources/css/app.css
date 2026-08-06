@@ -59,8 +59,11 @@
     .prose > pre {
         margin-top: 1.71429em;
         margin-bottom: 1.71429em;
+        padding: 1em;
         border-radius: 0.375rem;
         overflow-x: auto;
+        background: #2d2d2d;
+        color: #ccc;
     }
     .prose > code {
         padding: 0.125rem 0.25rem;
