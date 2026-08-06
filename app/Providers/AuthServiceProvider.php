@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Models\Post;
 use App\Policies\PostPolicy;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -12,7 +12,5 @@ class AuthServiceProvider extends ServiceProvider
         Post::class => PostPolicy::class,
     ];
 
-    public function boot(): void
-    {
-    }
+    public function boot(): void {}
 }

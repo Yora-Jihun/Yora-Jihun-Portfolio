@@ -50,7 +50,7 @@ class OtpService
             ->where('expires_at', '>', now())
             ->first();
 
-        if (!$record) {
+        if (! $record) {
             return false;
         }
 

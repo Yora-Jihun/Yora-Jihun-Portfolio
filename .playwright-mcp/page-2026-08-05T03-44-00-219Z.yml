@@ -1,0 +1,165 @@
+- generic [active] [ref=e1]:
+  - navigation "Main navigation" [ref=e2]:
+    - generic [ref=e3]:
+      - link "YJ Home" [ref=e5]:
+        - /url: http://127.0.0.1:8000
+        - text: YJ.
+      - generic [ref=e6]:
+        - link "About" [ref=e7]:
+          - /url: http://127.0.0.1:8000
+        - link "Projects" [ref=e8]:
+          - /url: http://127.0.0.1:8000/projects
+        - link "Skills" [ref=e9]:
+          - /url: http://127.0.0.1:8000/skills
+        - link "Experience" [ref=e10]:
+          - /url: http://127.0.0.1:8000/experience
+        - link "Blog" [ref=e11]:
+          - /url: http://127.0.0.1:8000/blog
+      - link "LET'S WORK TOGETHER" [ref=e13]:
+        - /url: http://127.0.0.1:8000/contact
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Blog
+        - heading "Your Passion Will Lead You to New Discoveries" [level=1] [ref=e21]
+        - paragraph [ref=e22]: Explore my latest articles, insights, and stories on design, engineering, and the craft of building refined digital products.
+      - generic [ref=e31]: SEC::01
+      - generic [ref=e32]: SYS::ONLINE
+      - generic [ref=e33]: GRID::ACTIVE
+      - generic [ref=e34]: NODE::READY
+    - 'link "Telco : Converge Pinned · Jul 30, 2026 · 5 min read Telco : Converge internet Read article" [ref=e37]':
+      - /url: http://127.0.0.1:8000/blog/telco-converge
+      - generic [ref=e38]:
+        - 'img "Telco : Converge" [ref=e41]'
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]: Pinned
+            - generic [ref=e45]: ·
+            - paragraph [ref=e46]: Jul 30, 2026
+            - generic [ref=e47]: ·
+            - paragraph [ref=e48]: 5 min read
+          - 'heading "Telco : Converge" [level=2] [ref=e49]'
+          - paragraph [ref=e50]: internet
+          - generic [ref=e51]: Read article
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - heading "Recent posts" [level=2] [ref=e57]
+        - generic [ref=e58]:
+          - button "All" [ref=e59]
+          - button "Technology" [ref=e60]
+          - button "Design" [ref=e61]
+          - button "Product" [ref=e62]
+          - button "Development" [ref=e63]
+          - button "Lifestyle" [ref=e64]
+      - generic [ref=e65]:
+        - link "Update from local Technology · 2 min read · 1 hr ago Update from local eopppppppppppppppp Read article" [ref=e66]:
+          - /url: http://127.0.0.1:8000/blog/update-from-local
+          - img "Update from local" [ref=e68]
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: Technology
+            - generic [ref=e71]: ·
+            - paragraph [ref=e72]: 2 min read
+            - generic [ref=e73]: ·
+            - paragraph [ref=e74]: 1 hr ago
+          - heading "Update from local" [level=3] [ref=e75]
+          - paragraph [ref=e76]: eopppppppppppppppp
+          - generic [ref=e77]: Read article
+        - link "NEXT JS Design · 5 min read · 19 hr ago NEXT JS Perform a final refinement pass on the blog hero section with the goal of achieving premium editorial quality comparable... Read article" [ref=e80]:
+          - /url: http://127.0.0.1:8000/blog/next-js
+          - img "NEXT JS" [ref=e82]
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Design
+            - generic [ref=e85]: ·
+            - paragraph [ref=e86]: 5 min read
+            - generic [ref=e87]: ·
+            - paragraph [ref=e88]: 19 hr ago
+          - heading "NEXT JS" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Perform a final refinement pass on the blog hero section with the goal of achieving premium editorial quality comparable...
+          - generic [ref=e91]: Read article
+        - link "Image Technology · 5 min read · Jul 30, 2026 Laravel TALL STACK Read article" [ref=e94]:
+          - /url: http://127.0.0.1:8000/blog/laravel
+          - generic [ref=e95]: Image
+          - generic [ref=e97]:
+            - paragraph [ref=e98]: Technology
+            - generic [ref=e99]: ·
+            - paragraph [ref=e100]: 5 min read
+            - generic [ref=e101]: ·
+            - paragraph [ref=e102]: Jul 30, 2026
+          - heading "Laravel" [level=3] [ref=e103]
+          - paragraph [ref=e104]: TALL STACK
+          - generic [ref=e105]: Read article
+        - link "ghjh Technology · 5 min read · Jul 27, 2026 ghjh hh Read article" [ref=e108]:
+          - /url: http://127.0.0.1:8000/blog/ghjh
+          - img "ghjh" [ref=e110]
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Technology
+            - generic [ref=e113]: ·
+            - paragraph [ref=e114]: 5 min read
+            - generic [ref=e115]: ·
+            - paragraph [ref=e116]: Jul 27, 2026
+          - heading "ghjh" [level=3] [ref=e117]
+          - paragraph [ref=e118]: hh
+          - generic [ref=e119]: Read article
+  - contentinfo [ref=e122]:
+    - generic [ref=e123]:
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - heading "Yora Jihun" [level=2] [ref=e127]
+          - paragraph [ref=e128]: Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.
+          - generic [ref=e129]: STATUS::ACTIVE
+          - generic [ref=e134]:
+            - link "Twitter" [ref=e135]:
+              - /url: "#"
+            - link "GitHub" [ref=e138]:
+              - /url: "#"
+            - link "LinkedIn" [ref=e141]:
+              - /url: "#"
+        - generic [ref=e144]:
+          - paragraph [ref=e145]: Navigate
+          - list [ref=e146]:
+            - listitem [ref=e147]:
+              - link "Home" [ref=e148]:
+                - /url: "#hero-section"
+            - listitem [ref=e149]:
+              - link "Blog" [ref=e150]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=e151]:
+              - link "Experience" [ref=e152]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=e153]:
+              - link "Skills" [ref=e154]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=e155]:
+              - link "Projects" [ref=e156]:
+                - /url: http://127.0.0.1:8000/projects
+        - generic [ref=e157]:
+          - paragraph [ref=e158]: Explore
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - link "Latest Articles" [ref=e161]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=e162]:
+              - link "Work Experience" [ref=e163]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=e164]:
+              - link "Skills & Tools" [ref=e165]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=e166]:
+              - link "Selected Projects" [ref=e167]:
+                - /url: http://127.0.0.1:8000/projects
+            - listitem [ref=e168]:
+              - link "Back to Top" [ref=e169]:
+                - /url: "#hero-section"
+        - generic [ref=e170]:
+          - paragraph [ref=e171]: Contact
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "yorajihun@gmail.com" [ref=e176]:
+                - /url: mailto:yorajihun@gmail.com
+            - listitem [ref=e177]:
+              - generic [ref=e181]: Seoul, South Korea
+            - listitem [ref=e182]:
+              - generic [ref=e185]: Currently employed
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: © 2026 Yora Jihun. All rights reserved.
+        - paragraph [ref=e188]: Designed & built with precision in Seoul, South Korea.

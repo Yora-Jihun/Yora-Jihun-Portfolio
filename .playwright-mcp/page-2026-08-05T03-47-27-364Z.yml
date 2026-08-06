@@ -1,0 +1,109 @@
+- generic [active] [ref=f3e1]:
+  - navigation "Main navigation" [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "YJ Home" [ref=f3e5]:
+        - /url: http://127.0.0.1:8000
+        - text: YJ.
+      - generic [ref=f3e6]:
+        - link "About" [ref=f3e7]:
+          - /url: http://127.0.0.1:8000
+        - link "Projects" [ref=f3e8]:
+          - /url: http://127.0.0.1:8000/projects
+        - link "Skills" [ref=f3e9]:
+          - /url: http://127.0.0.1:8000/skills
+        - link "Experience" [ref=f3e10]:
+          - /url: http://127.0.0.1:8000/experience
+        - link "Blog" [ref=f3e11]:
+          - /url: http://127.0.0.1:8000/blog
+      - link "LET'S WORK TOGETHER" [ref=f3e13]:
+        - /url: http://127.0.0.1:8000/contact
+  - main [ref=f3e17]:
+    - generic [ref=f3e18]: 0%
+    - generic [ref=f3e22]:
+      - link "Back to blog" [ref=f3e23]:
+        - /url: http://127.0.0.1:8000/blog
+      - generic [ref=f3e27]:
+        - 'heading "Telco : Converge" [level=1] [ref=f3e28]'
+        - paragraph [ref=f3e29]: internet
+    - article [ref=f3e32]:
+      - 'img "Telco : Converge" [ref=f3e34]'
+      - paragraph [ref=f3e36]: connection is weak
+      - generic [ref=f3e37]:
+        - generic [ref=f3e39]:
+          - generic [ref=f3e40]:
+            - img "Yora Jihun" [ref=f3e41]
+            - generic [ref=f3e42]:
+              - paragraph [ref=f3e43]: Yora Jihun
+              - paragraph [ref=f3e44]: Jul 30, 2026
+          - generic [ref=f3e45]:
+            - link [ref=f3e46]:
+              - /url: "#"
+            - link [ref=f3e49]:
+              - /url: "#"
+            - link [ref=f3e52]:
+              - /url: "#"
+        - link "Back to all posts" [ref=f3e55]:
+          - /url: http://127.0.0.1:8000/blog
+  - contentinfo [ref=f3e58]:
+    - generic [ref=f3e59]:
+      - generic [ref=f3e61]:
+        - generic [ref=f3e62]:
+          - heading "Yora Jihun" [level=2] [ref=f3e63]
+          - paragraph [ref=f3e64]: Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.
+          - generic [ref=f3e65]: STATUS::ACTIVE
+          - generic [ref=f3e70]:
+            - link "Twitter" [ref=f3e71]:
+              - /url: "#"
+            - link "GitHub" [ref=f3e74]:
+              - /url: "#"
+            - link "LinkedIn" [ref=f3e77]:
+              - /url: "#"
+        - generic [ref=f3e80]:
+          - paragraph [ref=f3e81]: Navigate
+          - list [ref=f3e82]:
+            - listitem [ref=f3e83]:
+              - link "Home" [ref=f3e84]:
+                - /url: "#hero-section"
+            - listitem [ref=f3e85]:
+              - link "Blog" [ref=f3e86]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f3e87]:
+              - link "Experience" [ref=f3e88]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f3e89]:
+              - link "Skills" [ref=f3e90]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f3e91]:
+              - link "Projects" [ref=f3e92]:
+                - /url: http://127.0.0.1:8000/projects
+        - generic [ref=f3e93]:
+          - paragraph [ref=f3e94]: Explore
+          - list [ref=f3e95]:
+            - listitem [ref=f3e96]:
+              - link "Latest Articles" [ref=f3e97]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f3e98]:
+              - link "Work Experience" [ref=f3e99]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f3e100]:
+              - link "Skills & Tools" [ref=f3e101]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f3e102]:
+              - link "Selected Projects" [ref=f3e103]:
+                - /url: http://127.0.0.1:8000/projects
+            - listitem [ref=f3e104]:
+              - link "Back to Top" [ref=f3e105]:
+                - /url: "#hero-section"
+        - generic [ref=f3e106]:
+          - paragraph [ref=f3e107]: Contact
+          - list [ref=f3e108]:
+            - listitem [ref=f3e109]:
+              - link "yorajihun@gmail.com" [ref=f3e112]:
+                - /url: mailto:yorajihun@gmail.com
+            - listitem [ref=f3e113]:
+              - generic [ref=f3e117]: Seoul, South Korea
+            - listitem [ref=f3e118]:
+              - generic [ref=f3e121]: Currently employed
+      - generic [ref=f3e122]:
+        - paragraph [ref=f3e123]: © 2026 Yora Jihun. All rights reserved.
+        - paragraph [ref=f3e124]: Designed & built with precision in Seoul, South Korea.

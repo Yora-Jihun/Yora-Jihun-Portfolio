@@ -6,9 +6,10 @@
     <meta name="description" content="Yora Jihun - Portfolio">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Yora Jihun</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles
-    <style>
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
+     @livewireStyles
+     @stack('styles')
+     <style>
         .page-enter {
             animation: pageFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
@@ -66,6 +67,7 @@
     <div class="cursor-ring hidden md:block" id="cursor-ring"></div>
     @yield('preload')
     @include('components.navbar')
+    @yield('progress-bar')
 
     <main class="main-content pt-16 page-enter">
         @yield('content')
@@ -73,8 +75,9 @@
 
     @include('components.footer')
 
-    @livewireScripts
-    <script>
+     @livewireScripts
+     @stack('scripts')
+     <script>
         (function() {
             const dot = document.getElementById('cursor-dot');
             const ring = document.getElementById('cursor-ring');

@@ -1,0 +1,108 @@
+- generic [active] [ref=f4e1]:
+  - navigation "Main navigation" [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "YJ Home" [ref=f4e5]:
+        - /url: http://127.0.0.1:8000
+        - text: YJ.
+      - generic [ref=f4e6]:
+        - link "About" [ref=f4e7]:
+          - /url: http://127.0.0.1:8000
+        - link "Projects" [ref=f4e8]:
+          - /url: http://127.0.0.1:8000/projects
+        - link "Skills" [ref=f4e9]:
+          - /url: http://127.0.0.1:8000/skills
+        - link "Experience" [ref=f4e10]:
+          - /url: http://127.0.0.1:8000/experience
+        - link "Blog" [ref=f4e11]:
+          - /url: http://127.0.0.1:8000/blog
+      - link "LET'S WORK TOGETHER" [ref=f4e13]:
+        - /url: http://127.0.0.1:8000/contact
+  - main [ref=f4e17]:
+    - generic [ref=f4e18]: 0%
+    - generic [ref=f4e22]:
+      - link "Back to blog" [ref=f4e23]:
+        - /url: http://127.0.0.1:8000/blog
+      - generic [ref=f4e27]:
+        - heading "Laravel" [level=1] [ref=f4e28]
+        - paragraph [ref=f4e29]: TALL STACK
+    - article [ref=f4e32]:
+      - paragraph [ref=f4e34]: Inside the infra
+      - generic [ref=f4e35]:
+        - generic [ref=f4e37]:
+          - generic [ref=f4e38]:
+            - img "Yora Jihun" [ref=f4e39]
+            - generic [ref=f4e40]:
+              - paragraph [ref=f4e41]: Yora Jihun
+              - paragraph [ref=f4e42]: Jul 30, 2026
+          - generic [ref=f4e43]:
+            - link [ref=f4e44]:
+              - /url: "#"
+            - link [ref=f4e47]:
+              - /url: "#"
+            - link [ref=f4e50]:
+              - /url: "#"
+        - link "Back to all posts" [ref=f4e53]:
+          - /url: http://127.0.0.1:8000/blog
+  - contentinfo [ref=f4e56]:
+    - generic [ref=f4e57]:
+      - generic [ref=f4e59]:
+        - generic [ref=f4e60]:
+          - heading "Yora Jihun" [level=2] [ref=f4e61]
+          - paragraph [ref=f4e62]: Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.
+          - generic [ref=f4e63]: STATUS::ACTIVE
+          - generic [ref=f4e68]:
+            - link "Twitter" [ref=f4e69]:
+              - /url: "#"
+            - link "GitHub" [ref=f4e72]:
+              - /url: "#"
+            - link "LinkedIn" [ref=f4e75]:
+              - /url: "#"
+        - generic [ref=f4e78]:
+          - paragraph [ref=f4e79]: Navigate
+          - list [ref=f4e80]:
+            - listitem [ref=f4e81]:
+              - link "Home" [ref=f4e82]:
+                - /url: "#hero-section"
+            - listitem [ref=f4e83]:
+              - link "Blog" [ref=f4e84]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f4e85]:
+              - link "Experience" [ref=f4e86]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f4e87]:
+              - link "Skills" [ref=f4e88]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f4e89]:
+              - link "Projects" [ref=f4e90]:
+                - /url: http://127.0.0.1:8000/projects
+        - generic [ref=f4e91]:
+          - paragraph [ref=f4e92]: Explore
+          - list [ref=f4e93]:
+            - listitem [ref=f4e94]:
+              - link "Latest Articles" [ref=f4e95]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f4e96]:
+              - link "Work Experience" [ref=f4e97]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f4e98]:
+              - link "Skills & Tools" [ref=f4e99]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f4e100]:
+              - link "Selected Projects" [ref=f4e101]:
+                - /url: http://127.0.0.1:8000/projects
+            - listitem [ref=f4e102]:
+              - link "Back to Top" [ref=f4e103]:
+                - /url: "#hero-section"
+        - generic [ref=f4e104]:
+          - paragraph [ref=f4e105]: Contact
+          - list [ref=f4e106]:
+            - listitem [ref=f4e107]:
+              - link "yorajihun@gmail.com" [ref=f4e110]:
+                - /url: mailto:yorajihun@gmail.com
+            - listitem [ref=f4e111]:
+              - generic [ref=f4e115]: Seoul, South Korea
+            - listitem [ref=f4e116]:
+              - generic [ref=f4e119]: Currently employed
+      - generic [ref=f4e120]:
+        - paragraph [ref=f4e121]: © 2026 Yora Jihun. All rights reserved.
+        - paragraph [ref=f4e122]: Designed & built with precision in Seoul, South Korea.

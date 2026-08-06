@@ -28,13 +28,13 @@ class LoginController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (!$user || !$user->is_admin) {
+        if (! $user || ! $user->is_admin) {
             return back()->withErrors([
                 'email' => 'No admin account found with this email address.',
             ]);
         }
 
-        $key = 'otp-send:' . $request->email;
+        $key = 'otp-send:'.$request->email;
         $maxSendAttempts = config('auth.max_verify_attempts', 5);
 
         if (RateLimiter::tooManyAttempts($key, $maxSendAttempts)) {
@@ -47,7 +47,7 @@ class LoginController extends Controller
             ]);
         }
 
-        $resendKey = 'otp-resend:' . $request->email;
+        $resendKey = 'otp-resend:'.$request->email;
 
         if (RateLimiter::tooManyAttempts($resendKey, 1)) {
             $seconds = RateLimiter::availableIn($resendKey);
@@ -63,7 +63,7 @@ class LoginController extends Controller
         $this->otpService->invalidateOtp($user);
         $otp = $this->otpService->sendOtp($user);
 
-        RateLimiter::clear('otp-verify:' . $request->email);
+        RateLimiter::clear('otp-verify:'.$request->email);
 
         $request->session()->forget('verify_attempts');
         $request->session()->forget('verify_failed');
@@ -84,6 +84,7 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
         return redirect('/');
     }
 }

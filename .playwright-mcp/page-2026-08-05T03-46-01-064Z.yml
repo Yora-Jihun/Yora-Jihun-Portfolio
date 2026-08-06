@@ -1,0 +1,109 @@
+- generic [active] [ref=f2e1]:
+  - navigation "Main navigation" [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "YJ Home" [ref=f2e5]:
+        - /url: http://127.0.0.1:8000
+        - text: YJ.
+      - generic [ref=f2e6]:
+        - link "About" [ref=f2e7]:
+          - /url: http://127.0.0.1:8000
+        - link "Projects" [ref=f2e8]:
+          - /url: http://127.0.0.1:8000/projects
+        - link "Skills" [ref=f2e9]:
+          - /url: http://127.0.0.1:8000/skills
+        - link "Experience" [ref=f2e10]:
+          - /url: http://127.0.0.1:8000/experience
+        - link "Blog" [ref=f2e11]:
+          - /url: http://127.0.0.1:8000/blog
+      - link "LET'S WORK TOGETHER" [ref=f2e13]:
+        - /url: http://127.0.0.1:8000/contact
+  - main [ref=f2e17]:
+    - generic [ref=f2e18]: 0%
+    - generic [ref=f2e22]:
+      - link "Back to blog" [ref=f2e23]:
+        - /url: http://127.0.0.1:8000/blog
+      - generic [ref=f2e27]:
+        - heading "NEXT JS" [level=1] [ref=f2e28]
+        - paragraph [ref=f2e29]: Perform a final refinement pass on the blog hero section with the goal of achieving premium editorial quality comparable to Apple, Linear, Stripe, Vercel, or Notion. Do not redesign the layout or introduce new visual elements—the improvements should come entirely from better proportions, alignment, typography, spacing, and visual hierarchy. Make the article title the dominant focal point by expanding the central content column and ensuring it carries approximately 60–65% of the hero's visual weight. Increase the separation between the title and the author sidebar so they no longer
+    - article [ref=f2e32]:
+      - img "NEXT JS" [ref=f2e34]
+      - paragraph [ref=f2e36]: description sample
+      - generic [ref=f2e37]:
+        - generic [ref=f2e39]:
+          - generic [ref=f2e40]:
+            - img "Yora Jihun" [ref=f2e41]
+            - generic [ref=f2e42]:
+              - paragraph [ref=f2e43]: Yora Jihun
+              - paragraph [ref=f2e44]: 19 hr ago
+          - generic [ref=f2e45]:
+            - link [ref=f2e46]:
+              - /url: "#"
+            - link [ref=f2e49]:
+              - /url: "#"
+            - link [ref=f2e52]:
+              - /url: "#"
+        - link "Back to all posts" [ref=f2e55]:
+          - /url: http://127.0.0.1:8000/blog
+  - contentinfo [ref=f2e58]:
+    - generic [ref=f2e59]:
+      - generic [ref=f2e61]:
+        - generic [ref=f2e62]:
+          - heading "Yora Jihun" [level=2] [ref=f2e63]
+          - paragraph [ref=f2e64]: Lead System Engineer & AI Specialist building refined, scalable systems from Seoul.
+          - generic [ref=f2e65]: STATUS::ACTIVE
+          - generic [ref=f2e70]:
+            - link "Twitter" [ref=f2e71]:
+              - /url: "#"
+            - link "GitHub" [ref=f2e74]:
+              - /url: "#"
+            - link "LinkedIn" [ref=f2e77]:
+              - /url: "#"
+        - generic [ref=f2e80]:
+          - paragraph [ref=f2e81]: Navigate
+          - list [ref=f2e82]:
+            - listitem [ref=f2e83]:
+              - link "Home" [ref=f2e84]:
+                - /url: "#hero-section"
+            - listitem [ref=f2e85]:
+              - link "Blog" [ref=f2e86]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f2e87]:
+              - link "Experience" [ref=f2e88]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f2e89]:
+              - link "Skills" [ref=f2e90]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f2e91]:
+              - link "Projects" [ref=f2e92]:
+                - /url: http://127.0.0.1:8000/projects
+        - generic [ref=f2e93]:
+          - paragraph [ref=f2e94]: Explore
+          - list [ref=f2e95]:
+            - listitem [ref=f2e96]:
+              - link "Latest Articles" [ref=f2e97]:
+                - /url: http://127.0.0.1:8000/blog
+            - listitem [ref=f2e98]:
+              - link "Work Experience" [ref=f2e99]:
+                - /url: http://127.0.0.1:8000/experience
+            - listitem [ref=f2e100]:
+              - link "Skills & Tools" [ref=f2e101]:
+                - /url: http://127.0.0.1:8000/skills
+            - listitem [ref=f2e102]:
+              - link "Selected Projects" [ref=f2e103]:
+                - /url: http://127.0.0.1:8000/projects
+            - listitem [ref=f2e104]:
+              - link "Back to Top" [ref=f2e105]:
+                - /url: "#hero-section"
+        - generic [ref=f2e106]:
+          - paragraph [ref=f2e107]: Contact
+          - list [ref=f2e108]:
+            - listitem [ref=f2e109]:
+              - link "yorajihun@gmail.com" [ref=f2e112]:
+                - /url: mailto:yorajihun@gmail.com
+            - listitem [ref=f2e113]:
+              - generic [ref=f2e117]: Seoul, South Korea
+            - listitem [ref=f2e118]:
+              - generic [ref=f2e121]: Currently employed
+      - generic [ref=f2e122]:
+        - paragraph [ref=f2e123]: © 2026 Yora Jihun. All rights reserved.
+        - paragraph [ref=f2e124]: Designed & built with precision in Seoul, South Korea.

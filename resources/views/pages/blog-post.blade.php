@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
-<!-- Reading Progress Bar -->
-<livewire:reading-progress-bar />
+@push('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css">
+@endpush
 
+@section('progress-bar')
+<livewire:reading-progress-bar />
+@endsection
+
+@section('content')
 <!-- Blog Post Header -->
 @include('components.blog-header', [
     'title' => $post->title,
@@ -68,6 +73,128 @@
 </div>
 
 <script>
+    // Reading Progress Bar
+    var readingProgressInitialized = false;
+
+    function initReadingProgress() {
+        if (readingProgressInitialized) return;
+        readingProgressInitialized = true;
+
+        const progressBar = document.getElementById('reading-progress');
+        const progressText = document.getElementById('reading-progress-text');
+        if (!progressBar || !progressText) {
+            readingProgressInitialized = false;
+            return;
+        }
+
+        let ticking = false;
+
+        function updateProgress() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const article = document.querySelector('article');
+            const viewportHeight = window.innerHeight;
+
+            let progress = 0;
+
+            if (article) {
+                // Calculate progress based on the article content
+                const articleTop = article.getBoundingClientRect().top + scrollTop;
+                const articleBottom = articleTop + article.offsetHeight;
+                const articleStart = articleTop - viewportHeight * 0.15; // Start when article enters viewport
+                const articleEnd = articleBottom - viewportHeight * 0.85; // End when article bottom is near viewport bottom
+                const articleRange = articleEnd - articleStart;
+
+                if (articleRange > 0) {
+                    progress = Math.min(100, Math.max(0, ((scrollTop - articleStart) / articleRange) * 100));
+                }
+            } else {
+                // Fallback to full page progress
+                const docHeight = document.documentElement.scrollHeight - viewportHeight;
+                progress = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+            }
+
+            progressBar.style.width = progress + '%';
+            progressText.textContent = Math.round(progress) + '%';
+            if (progress > 0 && progress < 100) {
+                progressText.style.opacity = '1';
+            } else {
+                progressText.style.opacity = '0';
+            }
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateProgress);
+            }
+        }
+
+        window.addEventListener('scroll', requestTick, { passive: true });
+        window.addEventListener('resize', requestTick, { passive: true });
+        updateProgress();
+    }
+
+    // Wait for Livewire to initialize and mount components
+    document.addEventListener('livewire:init', function() {
+        setTimeout(initReadingProgress, 50);
+    });
+
+    // Also handle Livewire navigation
+    document.addEventListener('livewire:navigated', function() {
+        readingProgressInitialized = false;
+        setTimeout(initReadingProgress, 50);
+    });
+
+    // Fallback: try on DOMContentLoaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initReadingProgress, 100);
+        });
+    } else {
+        setTimeout(initReadingProgress, 100);
+    }
+
+    // Table of Contents Active State
+    (function() {
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = [];
+        tocLinks.forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const section = document.getElementById(href.substring(1));
+                if (section) sections.push({ link: link, section: section });
+            }
+        });
+
+        if (sections.length === 0) return;
+
+        function updateActiveToc() {
+            let currentId = null;
+            sections.forEach(function(item) {
+                const rect = item.section.getBoundingClientRect();
+                if (rect.top <= 120) {
+                    currentId = item.link.getAttribute('href');
+                }
+            });
+            tocLinks.forEach(function(link) {
+                const href = link.getAttribute('href');
+                if (href === currentId) {
+                    link.classList.add('text-black');
+                    link.classList.remove('text-[#8E8E93]');
+                    link.style.borderColor = '#16A34A';
+                } else {
+                    link.classList.remove('text-black');
+                    link.classList.add('text-[#8E8E93]');
+                    link.style.borderColor = 'transparent';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveToc, { passive: true });
+        updateActiveToc();
+    })();
+
     const coverImage = document.getElementById('cover-image-full');
     if (coverImage) {
         coverImage.addEventListener('click', function() {
@@ -93,4 +220,15 @@
         }
     });
 </script>
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Prism !== 'undefined') {
+            Prism.highlightAll();
+        }
+    });
+</script>
+@endpush
 @endsection

@@ -19,7 +19,7 @@ class OtpController extends Controller
     {
         $email = $request->query('email');
 
-        if (!$email) {
+        if (! $email) {
             return redirect()->route('login');
         }
 
@@ -50,13 +50,13 @@ class OtpController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (!$user || !$user->is_admin) {
+        if (! $user || ! $user->is_admin) {
             return back()->withErrors([
                 'otp' => 'Invalid OTP.',
             ]);
         }
 
-        $key = 'otp-verify:' . $request->email;
+        $key = 'otp-verify:'.$request->email;
         $maxAttempts = config('auth.max_verify_attempts', 5);
         $rateLimiterDecay = config('auth.otp_rate_limiter_decay', 300);
 
@@ -103,7 +103,7 @@ class OtpController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (!$user || !$user->is_admin) {
+        if (! $user || ! $user->is_admin) {
             return response()->json([
                 'success' => false,
                 'message' => 'If that email is registered, an OTP has been sent.',
@@ -123,7 +123,7 @@ class OtpController extends Controller
             ]);
         }
 
-        $resendKey = 'otp-resend:' . $request->email;
+        $resendKey = 'otp-resend:'.$request->email;
 
         if (RateLimiter::tooManyAttempts($resendKey, 1)) {
             $remainingSeconds = RateLimiter::availableIn($resendKey);
@@ -148,7 +148,7 @@ class OtpController extends Controller
             $request->session()->forget('rate_limit_expiry');
             $request->session()->forget('rate_limit_total_ms');
 
-            RateLimiter::clear('otp-verify:' . $request->email);
+            RateLimiter::clear('otp-verify:'.$request->email);
 
             $request->session()->flash('status', 'OTP resent successfully. Please check your email.');
 
